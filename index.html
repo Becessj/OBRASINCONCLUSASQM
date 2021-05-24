@@ -4,34 +4,116 @@
     <meta charset="utf-8" />
     <title>Mapbox</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1" />
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js"></script>
-    <link
-      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="cabecera-responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 
   </head>
   <style>
-	  .marker {
-		  display: block;
-		  border: none;
-		  border-radius: 50%;
-		  cursor: pointer;
-		  padding: 0;
-		}
+    .mapboxgl-ctrl-logo {
+    display: none !important;
+}
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .marker {
+      background-image: url('mapbox-icon.png');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .mapboxgl-popup {
+      max-width: 200px;
+    }
+    .mapboxgl-popup-content {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+    }
+    h6 { 
+      display: block;
+      font-size: .4em;
+      margin-top: 0.1em;
+      margin-bottom: 0.2em;
+      margin-left: 0;
+      margin-right: 0;
+}
   </style>
+  <header class="cabecera-barra">
+      <div class="cabecera-barra-1"  style="z-index: 10000; position: relative; top: 0;">
+          <div class="cabecera-separador">
+   
+              <h1><a href="#">Qosqo<span>Mappers</span></a></h1>
+              <nav>
+                  <a href="#">Inicio</a>
+                  <a href="#" class="activo">Programas</a>
+                  <a href="#">Reportes</a>
+                  <a href="#"><select id="pubTypeFilter" name="pubTypeFilter" >
+                    <option value="">SELECCIONA TU DISTRITO</option>
+                  </select></a>
+              </nav>
+          </div> 
+      </div>
+      <div   style="z-index: 10000; position: relative; top: 0;">
+        <input type="checkbox" id="check">
+
+  <label for="check">
+<i class="fa fa-bars" id="btn"></i>
+<i class="fa fa-times" id="cancle"></i>
+
+
+  </label>
+  <div class="sidebar">
+<header><img src="images/qm1.png">
+<h6>Mapa de las obras públicas inconclusas en la provincia del Cusco, para visibilizar...</h6>
+</header>
+<ul>
+    <li><a href="#"><i class="fa fa-qrcode"></i>SAN SEBASTIAN</a></li>
+    <li><a href="#"><i class="fa fa-link"></i>SANTIAGO</a></li>
+    <li><a href="#"><i class="fa fa-eye"></i>WANCHAQ</a></li>
+    <li><a href="#"><i class="fa fa-question-circle"></i>SAYLLA</a></li>
+    <li><a href="#"><i class="fa fa-question-circle"></i>POROY</a></li>
+    <li><a href="#"><i class="fa fa-id-card"></i>SAN JERONIMO</a></li>
+    </ul>
+   <li>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="fa fa-youtube"></i></a>
+        
+      </div>
+    </li>
+   
+
+</div>
+<section></section>
+
+      </div>
+  </header>
   <body style="margin: 0px; padding: 0px;">
-    <select id="pubTypeFilter" name="pubTypeFilter" style="z-index: 999; position: absolute; top: 0;">
-      <option value="">SELECCIONA TU DISTRITO</option>
-    </select>
+    
+    
     <div id="map" style="position: absolute; top: 0px; bottom: 0px; width: 100%;"></div>
+    
     <script>
       mapboxgl.accessToken =
         "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA";
       const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/dark-v10",
-        zoom: 11,
-        center: [-0.14222681522369385, 51.53918203198429]
+        zoom: 13,
+        attributionControl: false,
+        center: [-71.96734,-13.52264]
       });
 
       window.map = map;
@@ -45,210 +127,324 @@
             properties: {
 			  message: 'Baz',
               iconSize: [40, 40],
-              name: "The World's End",
-              PubType: "Independent",
+              name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA AV. JUSTICIA Y JR. LA LIBERTAD EN LA URB. SAN FRANCISCO Y LA AV. LA CONVENCION DE LA URB. PROGRESO (ENTRE EL JR. LA VERDAD Y JR. SAYLLA)",
+              PubType: "Wanchaq",
               times:
-                "Monday-Thursday: 11.00-0.00" +
-                "<br>" +
-                "Friday-Saturday: 11.00-1.00" +
-                "<br>" +
-                "Sunday: 12.00-23.00"
+            "CÓDIGO SNIP: 2412227"+
+	          "<br>" +
+            "PRESUPUESTO: S/. 3,607,891.21"+
+            "<br>" +
+            "TIPO DE OBRA: Vías"+
+            "<br>" +
+            "PLAZO: 23/09/2020 - 19/07/2021"+
+            "<br>" +
+            "% AVANCE FÍSICO: 55%"+
+            "<br>" +
+            "BENEFICIARIOS: 1476"
             },
             geometry: {
               type: "Point",
-              coordinates: [-0.14222681522369385, 51.53918203198429]
+              coordinates: [-71.96734,-13.52264]
             }
           },
           {
             type: "Feature",
             properties: {
-              name: "The Black Heart",
-              PubType: "Independent",
+              name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA AV. HUAMANTIANA",
+              PubType: "Wanchaq",
               times:
-                "Monday-Tuesday: 15.00-23.00" +
+                "CÓDIGO SNIP: 378993"+
                 "<br>" +
-                "Wednesday-Thursday: 15.00-1.00" +
+                "PRESUPUESTO: S/. 1,753,170.12"+
                 "<br>" +
-                "Friday-Saturday: 12.00-2.00" +
+                "TIPO DE OBRA: Vías"+
                 "<br>" +
-                "Sunday: 12.00-23.00"
+                "PLAZO: 03/09/2020 - 30/04/2021"+
+                "% AVANCE FÍSICO: 55%"+
+                "<br>" +
+                "BENEFICIARIOS: 989"
             },
             geometry: {
               type: "Point",
-              coordinates: [-0.141786, 51.539003]
+              coordinates: [-71.9517695, -13.5308791]
             }
           },
           {
             type: "Feature",
             properties: {
-              name: "The Devonshire Arms",
-              PubType: "Independent",
+              name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL DE LAS CALLES DE LA URBANIZACION JOSE CARLOS MARIATEGUI, CENTRO POBLADO DE WANCHAQ",
+              PubType: "Wanchaq",
               times:
-                "Monday-Wednesday: 14.00-0.00" +
+                "CÓDIGO SNIP: 2385413"+
                 "<br>" +
-                "Thursday: 14.00-1.00" +
+                "PRESUPUESTO: S/. 2,824,357.20"+
                 "<br>" +
-                "Friday-Saturday: 14.00-2.00" +
+                "TIPO DE OBRA: Vías"+
                 "<br>" +
-                "Sunday: 14.00-0.00"
+                "PLAZO: 19/08/2020 - 15/04/2021"+
+                "<br>" +
+                "% AVANCE FÍSICO: 60%"+
+                "<br>" +
+                "BENEFICIARIOS: 998"
             },
             geometry: {
               type: "Point",
-              coordinates: [-0.14223217964172363, 51.54096705495758]
+              coordinates: [-71.9387932, -13.5319332]
             }
           },
           {
             type: "Feature",
             properties: {
-              name: "The Unicorn",
-              PubType: "Independent",
+              name: "MEJORAMIENTO DE LOS SERVICIOS DE EDUCACIÓN INICIAL DE LA I.E. MARÍA TRINIDAD ENRIQUEZ DE LA URBANIZACIÓN TTIO",
+              PubType: "Wanchaq",
               times:
-                "Monday-Thursday: 12.00-23.00" +
+                "CÓDIGO SNIP:"+
+                "<br>" + 
+                "PRESUPUESTO: S/. 3,036,193.52"+
                 "<br>" +
-                "Friday-Saturday: 12.00-0.00" +
+                "TIPO DE OBRA: Vías"+
                 "<br>" +
-                "Sunday: 12.00-23.00"
+                "PLAZO:"+
+                "<br>" + 
+                  "% AVANCE FÍSICO: 87%"+
+                "<br>" +
+                "BENEFICIARIOS: "
             },
             geometry: {
               type: "Point",
-              coordinates: [-0.12938976287841797, 51.54885034693916]
+              coordinates: [-71.9562577, -13.5318944]
             }
           },
           {
             type: "Feature",
             properties: {
-              name: "Garlic and Shots",
-              PubType: "Independent",
+              name: "MEJORAMIENTO DE LA TRANSITABILIDAD PEATONAL Y VEHICULAR DE LA CALLE REPUBLICA DE ARGENTINA",
+              PubType: "Wanchaq",
               times:
-                "Monday-Thursday: 17.00-0.00" +
+                "CÓDIGO SNIP: "+
                 "<br>" +
-                "Friday-Saturday: 16.00-1.00" +
+                "PRESUPUESTO: S/. 1,354,814.00"+
                 "<br>" +
-                "Sunday: 17.00-23.30"
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: "+
+                "<br>" +
+                "% AVANCE FÍSICO: 20%"+
+                "<br>" +
+                "BENEFICIARIOS: "
             },
             geometry: {
               type: "Point",
-              coordinates: [-0.13152748346328735, 51.51379710359405]
+              coordinates: [-71.9425225, -13.5339925]
             }
           },
           {
-            type: "Feature",
-            properties: {
-              name: "Crobar",
-              PubType: "Independent",
-              times: "Monday-Saturday: 16.00-3.00" + "<br>" + "Sunday: Closed"
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO Y CONSTRUCCION DE MURO DE CONTENCION AVENIDA JUSTICIA Y LA CONVENCION",
+                PubType: "Wanchaq",
+                times:
+                "CÓDIGO SNIP: "+
+                "<br>" +
+                "PRESUPUESTO: S/. 1,339,700.00"+
+                "<br>" +
+                "TIPO DE OBRA: Espacios públicos"+
+                "<br>" +
+                "PLAZO: "+
+                "<br>" +
+                "% AVANCE FÍSICO: 90% "+
+                "<br>" +
+                "BENEFICIARIOS: "
+              },
+              geometry: {
+          type: "Point",
+          coordinates: [-71.9643871, -13.5269163]
+        }
+      },
+      {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO Y AMPLIACIÓN DE LA OFERTA DE SERVICIOS EDUCATIVOS DE NIVEL SECUNDARIO DE LA I. E N°50025 - DANIEL ESTRADA PÉREZ",
+                PubType: "Wanchaq",
+                times:
+                  "CÓDIGO SNIP: "+
+                "<br>" +
+                "PRESUPUESTO: "+
+                "<br>" +
+                "TIPO DE OBRA: "+
+                "<br>" +
+                "PLAZO: "+
+                "<br>" +
+                "% AVANCE FÍSICO: 80% "+
+                "<br>" +
+                "BENEFICIARIOS: "
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9624256, -13.5245756]
+              }
             },
-            geometry: {
-              type: "Point",
-              coordinates: [-0.1302802562713623, 51.51482699380818]
-            }
-          },
-          {
-            type: "Feature",
-            properties: {
-              name: "Slim Jim's Liquor Store",
-              PubType: "Independent",
-              times:
-                "Monday-Wednesday: 17.00-2.00" +
+            {
+              type: "Feature",
+              properties: {
+                name: "RECUPERACION DEL MONUMENTO VIRREINAL RELIGIOSO TEMPLO DE SAN SEBASTIAN ARQUITECTURA Y ELEMENTOS DE INFRAESTRUCTURA FISICA DAÑADOS POR EL INCENDIO 2016",
+                PubType: "San Sebastian",
+                times:
+                  "CÓDIGO SNIP: 2383182"+
                 "<br>" +
-                "Thursday: 14.00-1.00" +
+                "PRESUPUESTO: S/ 4,008,778.77"+
                 "<br>" +
-                "Friday-Saturday: 14.00-2.00" +
+                "TIPO DE OBRA: Cultural"+
                 "<br>" +
-                "Sunday: 14.00-0.00"
+                "PLAZO: 09/2021 - 09/2020"+
+                "<br>" +
+                "% AVANCE FÍSICO: 80% "+
+                "<br>" +
+                "BENEFICIARIOS: "
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9376961, -13.5302581]
+              }
             },
-            geometry: {
-              type: "Point",
-              coordinates: [-0.10267496109008789, 51.53812099449894]
-            }
-          },
-          {
-            type: "Feature",
-            properties: {
-              name: "Aces and Eights Saloon Bar",
-              PubType: "Independent",
-              times:
-                "Monday-Thursday: 16.00-1.00" +
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO, AMPLIACIÓN DEL SERVICIO DE EDUCACIÓN PRIMARIA EN LA I.E. N 50014 TANKARPATA SECTOR TANKARPATA",
+                PubType: "San Sebastian",
+                times:
+                  "CÓDIGO SNIP: 266551"+
                 "<br>" +
-                "Friday-Saturday: 16.00-2.30" +
+                "PRESUPUESTO: S/ 5,582,619"+
                 "<br>" +
-                "Sunday: 16.00-1.00"
+                "TIPO DE OBRA: Educación"+
+                "<br>" +
+                "PLAZO: 04/2019 - 05/2020"+
+                "<br>" +
+                "% AVANCE FÍSICO: 70%"+
+                "<br>" +
+                "BENEFICIARIOS: 2100"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9488759, -13.5419141]
+              }
             },
-            geometry: {
-              type: "Point",
-              coordinates: [-0.1383929, 51.556696]
-            }
-          },
-          {
-            type: "Feature",
-            properties: {
-              name: "Ace Cafe",
-              PubType: "Independent",
-              times:
-                "Monday-Thursday: 7.00-22.30" +
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DEL CEMENTERIO CENTRAL",
+                PubType: "San Sebastian",
+                times:
+                  "CÓDIGO SNIP: 236235"+
                 "<br>" +
-                "Friday-Saturday: 7.00-11.00" +
+                "PRESUPUESTO: S/ 1,970,167.52"+
                 "<br>" +
-                "Sunday: 7.00-10.30"
+                "TIPO DE OBRA: Espacio público"+
+                "<br>" +
+                "PLAZO: 03/2020 - 01/2021"+
+                "<br>" +
+                "% AVANCE FÍSICO: 90%"+
+                "<br>" +
+                "BENEFICIARIOS: 1038"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9364336, -13.5332618]
+              }
             },
-            geometry: {
-              type: "Point",
-              coordinates: [-0.277751, 51.541419]
-            }
-          },
-          {
-            type: "Feature",
-            properties: {
-              name: "Brewdog",
-              PubType: "Pub Chain",
-              times:
-                "Monday-Thursday: 12.00-23.30" +
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE ESCALINATAS EN LAS DIFERENTES APVS DE LA MARGEN IZQUIERDA Y DERECHA",
+                PubType: "San Sebastian",
+                times:
+                  "CÓDIGO SNIP: 2485928"+
                 "<br>" +
-                "Friday-Saturday: 12.00-0.00" +
+                "PRESUPUESTO: S/ 1,698,159.21"+
                 "<br>" +
-                "Sunday: 12.00-10.30"
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 08/2020 - 04/2021"+
+                "<br>" +
+                "% AVANCE FÍSICO: 65%"+
+                "<br>" +
+                "BENEFICIARIOS: 7292"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9223879, -13.5269661]
+              }
             },
-            geometry: {
-              type: "Point",
-              coordinates: [-0.140905, 51.538394]
-            }
-          },
-          {
-            type: "Feature",
-            properties: {
-              name: "The Draft House",
-              PubType: "Pub Chain",
-              times:
-                "Monday-Wednesday: 12.00-23.00" +
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA CALLE TENERIA SONDOR, PSJ. TENERIA, CALLE TICAPATA,PSJ.NNOMINADO A (PRECURSORES), PSJ. B (HIPOLITO HUNANUE), PSJ INNOMINADO C (LUCEROS DEL AMANECER), URB TENERIA",
+                PubType: "San Sebastian",
+                times:
+                  "CÓDIGO SNIP: 155941"+
                 "<br>" +
-                "Thursday: 12.00-0.00" +
+                "PRESUPUESTO: S/ 1,437,244.02"+
                 "<br>" +
-                "Friday-Saturday: 12.00-1.00" +
+                "TIPO DE OBRA: Vías"+
                 "<br>" +
-                "Sunday: 12.00-10.30"
+                "PLAZO: 03/2020 - 10/2020"+
+                "<br>" +
+                "% AVANCE FÍSICO: 30% "+
+                "<br>" +
+                "BENEFICIARIOS: 6661"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9106013, -13.5316119]
+              }
             },
-            geometry: {
-              type: "Point",
-              coordinates: [-0.138385, 51.54154]
-            }
-          },
-          {
-            type: "Feature",
-            properties: {
-              name: "The Draft House",
-              PubType: "Pub Chain",
-              times:
-                "Monday-Thursday: 12.00-23.00" +
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE CALLE SR. DE QUISPIQUILLA, PJE. VERA, PJE. MUÑECAS, PJE. ARISTIDES MEZA, PJE. MELITON CAMPOS, PJE. CHUMA DE BOLIVIA Y PJE. VISITACION LOPEZ MORALES DE LA APV VERA VELASCO",
+                PubType: "San Sebastian",
+                times:
+                  "CÓDIGO SNIP: 296927"+
                 "<br>" +
-                "Friday-Saturday: 12.00-0.00" +
+                "PRESUPUESTO: S/ 730,864.61"+
                 "<br>" +
-                "Sunday: Closed"
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 12/2018  - 06/2019"+
+                "<br>" +
+                "% AVANCE FÍSICO: 90%"+
+                "<br>" +
+                "BENEFICIARIOS: 127"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.918139, -13.5421909]
+              }
             },
-            geometry: {
-              type: "Point",
-              coordinates: [-0.135732, 51.519278]
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LAS CALLES SIN NOMBRE Y ARCANGELES ENTRE LAS APVS SANTA ROSA COMITE 04, TRES CRUCES Y URB. SAN GABRIEL",
+                PubType: "San Sebastian",
+                times:
+                  "CÓDIGO SNIP: 270645"+
+                "<br>" +
+                "PRESUPUESTO: S/ 2,749,287.34"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 12/2018 - 10/2019"+
+                "<br>" +
+                "% AVANCE FÍSICO: 70% "+
+                "<br>" +
+                "BENEFICIARIOS: 600"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9206846, -13.5278901]
+              }
             }
-          }
         ]
       };
 
@@ -298,7 +494,7 @@
                 "<h3>" +
                   features[0].properties.name +
                   "</h3>" +
-                  "<h4>Opening Times</h4>" +
+                  "<h4>MÁS INFORMACIÓN</h4>" +
                   "<p>" +
                   features[0].properties.times +
                   "</p>"
@@ -309,26 +505,18 @@
           }
         });
       });
-	  // Add markers to the map.
-	  geojson.features.forEach(function (marker) {
-        // Create a DOM element for each marker.
-        var el = document.createElement('div');
-        el.className = 'marker';
-        el.style.backgroundImage =
-            'url(https://placekitten.com/g/' +
-            marker.properties.iconSize.join('/') +
-            '/)';
-        el.style.width = marker.properties.iconSize[0] + 'px';
-        el.style.height = marker.properties.iconSize[1] + 'px';
-        el.style.backgroundSize = '100%';
+      geojson.features.forEach(function(marker) {
+        // create a HTML element for each feature
+      var el = document.createElement('div');
+      el.className = 'marker';
 
-        
-
-        // Add markers to the map.
-        new mapboxgl.Marker(el)
-            .setLngLat(marker.geometry.coordinates)
-            .addTo(map);
-    });
+      // make a marker for each feature and add to the map
+      new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+      });
     </script>
+
   </body>
+  
 </html>
