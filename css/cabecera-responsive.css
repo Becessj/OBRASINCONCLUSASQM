@@ -109,13 +109,13 @@
   .sidebar header p {
     padding: 15px;
   }
-  
+  /*PARA LA CABECERA*/
 .cabecera-barra{
     font:13px Arial, Helvetica, sans-serif;
 }
  
 .cabecera-barra .cabecera-separador{
-    max-width: 1200px;
+    max-width: 700px;
     text-align: center;
     margin: 0 auto;
 }
@@ -173,50 +173,7 @@
     border-radius: 2px;
     background-color: #2B5773;
     padding: 8px 12px;
-}
- 
- 
-/* Barra 2*/
- 
-.cabecera-barra .cabecera-barra-2 {
-    background-color: #ffffff;
-    box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.05);
-    padding: 20px 40px;
-}
- 
-.cabecera-barra .cabecera-barra-2 h2 {
-    line-height: 20px;
-    margin: 0;
-    float: left;
-}
- 
-.cabecera-barra .cabecera-barra-2 h2 a {
-    font-size: 16px;
-    color: #4e5359;
-    text-decoration: none;
-}
- 
-.cabecera-barra .cabecera-barra-2 nav {
-    text-align: right;
-    line-height: 20px;
-    font-size: 16px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
- 
-.cabecera-barra .cabecera-barra-2 nav a {
-    display: inline-block;
-    color: #4e5359;
-    text-decoration: none;
-}
- 
-.cabecera-barra .cabecera-barra-2 nav i.fa {
-    color: #A9B7BF;
-    margin: 0 4px 0 15px;
-}
- 
- 
+} 
 /*  Hacemos responsive la cabecera usted podrá adicionar mas propiedades para diferentes dispositivos solo se ha usado dos para este demo . */
  
 @media all and (max-width: 800px) {
