@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Mapbox</title>
+    <title>QOSQO MAPPERS</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1" />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/cabecera-responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "icon" href = "images/qm1.png" type = "image/x-icon">
 	 
   </head>
   <style>
@@ -35,9 +36,53 @@
     .mapboxgl-popup {
       max-width: 200px;
     }
+    .mapboxgl-popup-close-button {
+      display: inline;
+      font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    }
     .mapboxgl-popup-content {
-      text-align: center;
-      font-family: 'Open Sans', sans-serif;
+      font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+      padding: 0;
+      width: 250px;
+      position: inherit;
+    }
+
+    .mapboxgl-popup-content-wrapper {
+      padding: 1%;
+    }
+
+    .mapboxgl-popup-content h3 {
+      background: #91c949;
+      color: #fff;
+      margin: 0;
+      display: block;
+      padding: 6px;
+      border-radius: 10px 10px 0 0;
+      font-weight: 0px;
+      font-size: 20px;
+      margin-top: -15px;
+    }
+    .mapboxgl-popup-content h4 {
+      margin: 0;
+      display: block;
+      padding: 10px;
+      font-weight: 5px;
+    }
+
+    .mapboxgl-popup-content div {
+      padding: 10px;
+    }
+
+    .mapboxgl-container .leaflet-marker-icon {
+      cursor: pointer;
+    }
+
+    .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+      margin-top: 15px;
+    }
+
+    .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+      border-bottom-color: #91c949;
     }
     h6 { 
       display: block;
@@ -47,6 +92,20 @@
       margin-left: 0;
       margin-right: 0;
 }
+    p {
+      color: navy;
+      text-indent: 30px;
+      text-transform: uppercase;
+      font-size: 15px;
+    }
+    img {
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      margin-left: 10px
+    
+    }
+    
   </style>
   <header class="cabecera-barra">
       <div class="cabecera-barra-1"  style="z-index: 10000; position: relative; top: 0;">
@@ -55,8 +114,8 @@
               <h1><a href="#">Qosqo<span>Mappers</span></a></h1>
               <nav>
                   <a href="#">Inicio</a>
-                  <a href="#" class="activo">Programas</a>
-                  <a href="#">Reportes</a>
+                  <a href="#" class="activo">Acerca de</a>
+                  <a href="#">DISTRITO:</a>
                   <a href="#"><select id="pubTypeFilter" name="pubTypeFilter" >
                     <option value="">SELECCIONA TU DISTRITO</option>
                   </select></a>
@@ -76,14 +135,14 @@
     <header><img src="images/qm1.png">
     <h6>Mapa de las obras públicas inconclusas en la provincia del Cusco, para visibilizar...</h6>
     </header>
-<ul>
-    <li><a href="#" id="fly1"><i class="fa fa-qrcode"></i>SAN SEBASTIAN</a></li>
-    <li><a href="#" id="fly2"><i class="fa fa-link"></i>SANTIAGO</a></li>
-    <li><a href="#" id="fly3"><i class="fa fa-eye"></i>WANCHAQ</a></li>
-    <li><a href="#" id="fly4"><i class="fa fa-question-circle"></i>SAYLLA</a></li>
-    <li><a href="#" id="fly5"><i class="fa fa-question-circle"></i>CUSCO</a></li>
-    <li><a href="#" id="fly6"><i class="fa fa-question-circle"></i>POROY</a></li>
-    <li><a href="#" id="fly7"><i class="fa fa-id-card"></i>SAN JERONIMO</a></li>
+<ul >
+    <li><a href="#" id="fly1"><img src="images/sebas.png">SAN SEBASTIAN</a></li>
+    <li><a href="#" id="fly2"><img src="images/santi.png"></i>SANTIAGO</a></li>
+    <li><a href="#" id="fly3"><img src="images/wan.png">WANCHAQ</a></li>
+    <li><a href="#" id="fly4"><img src="images/say.png">SAYLLA</a></li>
+    <li><a href="#" id="fly5"><img src="images/cusco.png">CUSCO</a></li>
+    <li><a href="#" id="fly6"><img src="images/cusco.png">POROY</a></li>
+    <li><a href="#" id="fly7"><img src="images/jero.png">SAN JERONIMO</a></li>
     </ul>
    <li>
       <div class="social-links">
@@ -154,8 +213,8 @@
       'line-cap': 'round'
       },
       'paint': {
-      'line-color': '#888',
-      'line-width': 8
+      'line-color': '#ffffff',
+      'line-width': 3
       }
       });
       });
@@ -241,9 +300,9 @@
           type: 'Feature',
           properties: {
               name: "linea linea",
-              PubType: "PUEBLO",
+              PubType: "LINEA PUNTO",
               times:
-                "CÓDIGO SNIP: 378993"+
+              "<br>"+"CÓDIGO SNIP: 378993"+
                 "<br>" +
                 "PRESUPUESTO: S/. 1,753,170.12"+
                 "<br>" +
@@ -252,7 +311,8 @@
                 "PLAZO: 03/09/2020 - 30/04/2021"+
                 "% AVANCE FÍSICO: 55%"+
                 "<br>" +
-                "BENEFICIARIOS: 989"
+                "BENEFICIARIOS: 989"+
+                "<br>"
             },
             geometry: {
               type: "LineString",
@@ -285,7 +345,7 @@
               name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA AV. JUSTICIA Y JR. LA LIBERTAD EN LA URB. SAN FRANCISCO Y LA AV. LA CONVENCION DE LA URB. PROGRESO (ENTRE EL JR. LA VERDAD Y JR. SAYLLA)",
               PubType: "Wanchaq",
               times:
-            "CÓDIGO SNIP: 2412227"+
+              "<br>"+"CÓDIGO SNIP: 2412227"+
 	          "<br>" +
             "PRESUPUESTO: S/. 3,607,891.21"+
             "<br>" +
@@ -295,7 +355,9 @@
             "<br>" +
             "% AVANCE FÍSICO: 55%"+
             "<br>" +
-            "BENEFICIARIOS: 1476"
+            "BENEFICIARIOS: 1476"+
+                "<br>"+" "+
+                "<br>"
             },
             geometry: {
               type: "Point",
@@ -308,7 +370,7 @@
               name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA AV. HUAMANTIANA",
               PubType: "Wanchaq",
               times:
-                "CÓDIGO SNIP: 378993"+
+              "<br>"+"CÓDIGO SNIP: 378993"+
                 "<br>" +
                 "PRESUPUESTO: S/. 1,753,170.12"+
                 "<br>" +
@@ -318,6 +380,9 @@
                 "% AVANCE FÍSICO: 55%"+
                 "<br>" +
                 "BENEFICIARIOS: 989"
+                +
+                "<br>"+" "+
+                "<br>"
             },
             geometry: {
               type: "Point",
@@ -330,7 +395,7 @@
               name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL DE LAS CALLES DE LA URBANIZACION JOSE CARLOS MARIATEGUI, CENTRO POBLADO DE WANCHAQ",
               PubType: "Wanchaq",
               times:
-                "CÓDIGO SNIP: 2385413"+
+              "<br>"+"CÓDIGO SNIP: 2385413"+
                 "<br>" +
                 "PRESUPUESTO: S/. 2,824,357.20"+
                 "<br>" +
@@ -340,7 +405,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 60%"+
                 "<br>" +
-                "BENEFICIARIOS: 998"
+                "BENEFICIARIOS: 998"+
+                "<br>"+" "+
+                "<br>"
             },
             geometry: {
               type: "Point",
@@ -353,7 +420,7 @@
               name: "MEJORAMIENTO DE LOS SERVICIOS DE EDUCACIÓN INICIAL DE LA I.E. MARÍA TRINIDAD ENRIQUEZ DE LA URBANIZACIÓN TTIO",
               PubType: "Wanchaq",
               times:
-                "CÓDIGO SNIP:"+
+              "<br>"+"CÓDIGO SNIP:"+
                 "<br>" + 
                 "PRESUPUESTO: S/. 3,036,193.52"+
                 "<br>" +
@@ -363,7 +430,9 @@
                 "<br>" + 
                   "% AVANCE FÍSICO: 87%"+
                 "<br>" +
-                "BENEFICIARIOS: "
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
             },
             geometry: {
               type: "Point",
@@ -376,7 +445,7 @@
               name: "MEJORAMIENTO DE LA TRANSITABILIDAD PEATONAL Y VEHICULAR DE LA CALLE REPUBLICA DE ARGENTINA",
               PubType: "Wanchaq",
               times:
-                "CÓDIGO SNIP: "+
+              "<br>"+"CÓDIGO SNIP: "+
                 "<br>" +
                 "PRESUPUESTO: S/. 1,354,814.00"+
                 "<br>" +
@@ -386,7 +455,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 20%"+
                 "<br>" +
-                "BENEFICIARIOS: "
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
             },
             geometry: {
               type: "Point",
@@ -399,7 +470,7 @@
                 name: "MEJORAMIENTO Y CONSTRUCCION DE MURO DE CONTENCION AVENIDA JUSTICIA Y LA CONVENCION",
                 PubType: "Wanchaq",
                 times:
-                "CÓDIGO SNIP: "+
+                "<br>"+"CÓDIGO SNIP: "+
                 "<br>" +
                 "PRESUPUESTO: S/. 1,339,700.00"+
                 "<br>" +
@@ -409,7 +480,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 90% "+
                 "<br>" +
-                "BENEFICIARIOS: "
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
           type: "Point",
@@ -422,7 +495,7 @@
                 name: "MEJORAMIENTO Y AMPLIACIÓN DE LA OFERTA DE SERVICIOS EDUCATIVOS DE NIVEL SECUNDARIO DE LA I. E N°50025 - DANIEL ESTRADA PÉREZ",
                 PubType: "Wanchaq",
                 times:
-                  "CÓDIGO SNIP: "+
+                "<br>"+"CÓDIGO SNIP: "+
                 "<br>" +
                 "PRESUPUESTO: "+
                 "<br>" +
@@ -432,7 +505,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 80% "+
                 "<br>" +
-                "BENEFICIARIOS: "
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
                 type: "Point",
@@ -445,7 +520,7 @@
                 name: "RECUPERACION DEL MONUMENTO VIRREINAL RELIGIOSO TEMPLO DE SAN SEBASTIAN ARQUITECTURA Y ELEMENTOS DE INFRAESTRUCTURA FISICA DAÑADOS POR EL INCENDIO 2016",
                 PubType: "San Sebastian",
                 times:
-                  "CÓDIGO SNIP: 2383182"+
+                "<br>"+"CÓDIGO SNIP: 2383182"+
                 "<br>" +
                 "PRESUPUESTO: S/ 4,008,778.77"+
                 "<br>" +
@@ -455,7 +530,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 80% "+
                 "<br>" +
-                "BENEFICIARIOS: "
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
                 type: "Point",
@@ -468,7 +545,7 @@
                 name: "MEJORAMIENTO, AMPLIACIÓN DEL SERVICIO DE EDUCACIÓN PRIMARIA EN LA I.E. N 50014 TANKARPATA SECTOR TANKARPATA",
                 PubType: "San Sebastian",
                 times:
-                  "CÓDIGO SNIP: 266551"+
+                "<br>"+"CÓDIGO SNIP: 266551"+
                 "<br>" +
                 "PRESUPUESTO: S/ 5,582,619"+
                 "<br>" +
@@ -478,7 +555,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 70%"+
                 "<br>" +
-                "BENEFICIARIOS: 2100"
+                "BENEFICIARIOS: 2100"+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
                 type: "Point",
@@ -491,7 +570,7 @@
                 name: "MEJORAMIENTO DEL CEMENTERIO CENTRAL",
                 PubType: "San Sebastian",
                 times:
-                  "CÓDIGO SNIP: 236235"+
+                "<br>"+"CÓDIGO SNIP: 236235"+
                 "<br>" +
                 "PRESUPUESTO: S/ 1,970,167.52"+
                 "<br>" +
@@ -501,7 +580,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 90%"+
                 "<br>" +
-                "BENEFICIARIOS: 1038"
+                "BENEFICIARIOS: 1038"+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
                 type: "Point",
@@ -514,7 +595,7 @@
                 name: "MEJORAMIENTO DE ESCALINATAS EN LAS DIFERENTES APVS DE LA MARGEN IZQUIERDA Y DERECHA",
                 PubType: "San Sebastian",
                 times:
-                  "CÓDIGO SNIP: 2485928"+
+                "<br>"+ "CÓDIGO SNIP: 2485928"+
                 "<br>" +
                 "PRESUPUESTO: S/ 1,698,159.21"+
                 "<br>" +
@@ -524,7 +605,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 65%"+
                 "<br>" +
-                "BENEFICIARIOS: 7292"
+                "BENEFICIARIOS: 7292"+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
                 type: "Point",
@@ -537,7 +620,7 @@
                 name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA CALLE TENERIA SONDOR, PSJ. TENERIA, CALLE TICAPATA,PSJ.NNOMINADO A (PRECURSORES), PSJ. B (HIPOLITO HUNANUE), PSJ INNOMINADO C (LUCEROS DEL AMANECER), URB TENERIA",
                 PubType: "San Sebastian",
                 times:
-                  "CÓDIGO SNIP: 155941"+
+                "<br>"+ "CÓDIGO SNIP: 155941"+
                 "<br>" +
                 "PRESUPUESTO: S/ 1,437,244.02"+
                 "<br>" +
@@ -547,7 +630,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 30% "+
                 "<br>" +
-                "BENEFICIARIOS: 6661"
+                "BENEFICIARIOS: 6661"+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
                 type: "Point",
@@ -560,7 +645,7 @@
                 name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE CALLE SR. DE QUISPIQUILLA, PJE. VERA, PJE. MUÑECAS, PJE. ARISTIDES MEZA, PJE. MELITON CAMPOS, PJE. CHUMA DE BOLIVIA Y PJE. VISITACION LOPEZ MORALES DE LA APV VERA VELASCO",
                 PubType: "San Sebastian",
                 times:
-                  "CÓDIGO SNIP: 296927"+
+                "<br>"+  "CÓDIGO SNIP: 296927"+
                 "<br>" +
                 "PRESUPUESTO: S/ 730,864.61"+
                 "<br>" +
@@ -570,7 +655,9 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 90%"+
                 "<br>" +
-                "BENEFICIARIOS: 127"
+                "BENEFICIARIOS: 127"+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
                 type: "Point",
@@ -583,7 +670,7 @@
                 name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LAS CALLES SIN NOMBRE Y ARCANGELES ENTRE LAS APVS SANTA ROSA COMITE 04, TRES CRUCES Y URB. SAN GABRIEL",
                 PubType: "San Sebastian",
                 times:
-                  "CÓDIGO SNIP: 270645"+
+                "<br>"+ "CÓDIGO SNIP: 270645"+
                 "<br>" +
                 "PRESUPUESTO: S/ 2,749,287.34"+
                 "<br>" +
@@ -593,7 +680,10 @@
                 "<br>" +
                 "% AVANCE FÍSICO: 70% "+
                 "<br>" +
-                "BENEFICIARIOS: 600"
+                "BENEFICIARIOS: 600"+
+                "<br>"+" "+
+                "<br>"+" "+
+                "<br>"
               },
               geometry: {
                 type: "Point",
@@ -602,7 +692,31 @@
             }
         ]
       };
-      
+      map.on('load', function () {
+        // Load an image from an external URL.
+        map.loadImage(
+        'images/cat.png',
+        function (error, image) {
+        if (error) throw error;
+        
+        // Add the image to the map style.
+        map.addImage('cat', image);
+        
+        
+        
+        // Add a layer to use the image to represent the data.
+        map.addLayer({
+        'id': 'points',
+        'type': 'symbol',
+        'source': 'point', // reference the data source
+        'layout': {
+        
+        }
+        });
+        }
+        );
+        });
+        
       map.on("load", function() {
         map.addLayer({
           id: "places",
@@ -612,9 +726,8 @@
             data: geojson
           },
           layout: {
-            "icon-image": "museum-15",
-            "icon-size": 1.25,
-            "icon-allow-overlap": true,
+            'icon-image': 'cat', // reference the image
+            'icon-size': 0.2
           }
         });
 
