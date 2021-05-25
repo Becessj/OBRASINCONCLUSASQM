@@ -165,8 +165,8 @@
       </div>
   </header>
   
-  <body style="margin: 0px; padding: 0px;">
-    <div class="loader-page"></div>
+  <body onload="myFunction()"  style="margin: 0px; padding: 0px;">
+    <div id="loader"></div>
     <div id="map" style="position: absolute; top: 0px; bottom: 0px; width: 100%;"></div>
     <script>
       mapboxgl.accessToken =
@@ -294,6 +294,7 @@
       trackUserLocation: true
       })
       );
+      
       window.map = map;
 	  
       const geojson = {
@@ -1169,14 +1170,15 @@
       
     </script>
     <script>
-      $(window).on('load', function () {
-      setTimeout(function () {
-          $(".loader-page").css({visibility:"hidden",opacity:"0"})
-        }, 2000);
-          
-      });
-    </script>
-    
-  </body>
-  <script src="probando.js"></script>
+      var myVar;
+      
+      function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+      }
+      
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+      </script>
 </html>
