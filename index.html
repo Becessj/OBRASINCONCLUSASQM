@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>QOSQO MAPPERS</title>
+    <title>QOSQO MAPPERS-OBRAS INCONCLUSAS</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1" />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "icon" href = "images/qm1.png" type = "image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
 
 	 
   </head>
@@ -118,7 +119,7 @@
               <nav>
                   <a href="#" class="activo">Inicio</a>
                   <a href="#" >Acerca de</a>
-                  <a href="#">ITEM LIBRE</a>
+                  <a href="#">Nuestros proyectos</a>
                   <a><select class="select-css" id="pubTypeFilter" name="pubTypeFilter" >
                     <option value="">DISTRITOS</option>
                   </select></a>
@@ -165,8 +166,8 @@
       </div>
   </header>
   
-  <body onload="myFunction()"  style="margin: 0px; padding: 0px;">
-    <div id="loader"></div>
+  <body  style="margin: 0px; padding: 0px;">
+    <div class="loader-page"></div>
     <div id="map" style="position: absolute; top: 0px; bottom: 0px; width: 100%;"></div>
     <script>
       mapboxgl.accessToken =
@@ -1169,16 +1170,12 @@
       }));
       
     </script>
-    <script>
-      var myVar;
-      
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-      
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      }
-      </script>
+   <script>
+     $(window).on('load', function () {
+      setTimeout(function () {
+    $(".loader-page").css({visibility:"hidden",opacity:"0"})
+  }, 2000);
+     
+});
+   </script>
 </html>
