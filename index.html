@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "icon" href = "images/qm1.png" type = "image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 	 
   </head>
   <style>
@@ -38,7 +40,7 @@
     }
     .mapboxgl-popup-close-button {
       display: inline;
-      font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+      font: 400 40px/10px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
     }
     .mapboxgl-popup-content {
       font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
@@ -106,8 +108,9 @@
       vertical-align:middle;
     
     }
-   
+    
   </style>
+  
   <header class="cabecera-barra">
       <div class="cabecera-barra-1"  style="z-index: 10000; position: relative; top: 0;">
           <div class="cabecera-separador">
@@ -162,11 +165,11 @@
 
       </div>
   </header>
+  
   <body style="margin: 0px; padding: 0px;">
-    
-    
+    <div class="loader-page"></div>
+    <div class="loader"></div>
     <div id="map" style="position: absolute; top: 0px; bottom: 0px; width: 100%;"></div>
-    
     <script>
       mapboxgl.accessToken =
         "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA";
@@ -177,6 +180,7 @@
         attributionControl: false,
         center: [-71.93740322917174,-13.530044282718151], 
       });
+      
       map.on('load', function () {
       map.addSource('route', {
       'type': 'geojson',
@@ -691,13 +695,374 @@
                 type: "Point",
                 coordinates: [-71.9206846, -13.5278901]
               }
-            }
-        ]
+            },{
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN LAS CALLES LOS GERANIOS, LAS MAGNOLIAS, GIRASOLES, KANTUS Y AV. PICOL DE LA APV MACHU PICOL",
+                PubType: "San Jerónimo",
+                times:
+                "<br>"+"CÓDIGO SNIP: 262483"+
+                "<br>" +
+                "PRESUPUESTO: S/. 3,256,052"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 11/03/2019 - 29/12/2020"+
+                "<br>" +
+                "% AVANCE FÍSICO: 80%"+
+                "<br>" +
+                "BENEFICIARIOS: 2,065"+
+                "<br>"+" "+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.8974209, -13.5282796]
+              }
+            },
+              {
+                    type: "Feature",
+                    properties: {
+                      name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA A.P.V. ALTIVA CANAS",
+                      PubType: "San Jerónimo",
+                      times:
+                      "<br>"+"CÓDIGO SNIP: 324579"+"<br>" +
+                        "PRESUPUESTO: S/. 8,257,928"+
+                        "<br>" +
+                        "TIPO DE OBRA: VíasPLAZO: 17/12/2020 - 23/08/2021"+
+                        "<br>" +
+                        "% AVANCE FÍSICO: 35%"+
+                        "<br>" +
+                        "BENEFICIARIOS: 2,959"+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+                      },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.9057233, -13.5454633]
+                    }
+                  },
+                  {
+                  type: "Feature",
+                  properties: {
+                    name: "MEJORAMIENTO DEL PARQUE Y ZONAS DE ENTRETENIMIENTO EN LA APV. HUAYNA PICOL",
+                    PubType: "San Jerónimo",
+                    times:
+                    "<br>"+"CÓDIGO SNIP: 2437279"+
+                        "<br>" +
+                        "PRESUPUESTO: S/. 596,872"+
+                        "<br>" +
+                        "TIPO DE OBRA: Espacio Público"+
+                        "<br>" +
+                        "PLAZO: 24/09/2020 - 03/01/2021"+
+                        "<br>" +
+                        "% AVANCE FÍSICO: 90%"+
+                        "<br>" +
+                        "BENEFICIARIOS: 1,527"+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+            },
+                  geometry: {
+                    type: "Point",
+                    coordinates: [-71.8957452, -13.5263266]
+                  }
+                },
+                {
+                  type: "Feature",
+                  properties: {
+                    name: "CREACION DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA APV HUAYNA PICOL",
+                    PubType: "San Jerónimo",
+                    times:
+                    "<br>"+"CÓDIGO SNIP: 2437503"+
+                        "<br>" +
+                        "PRESUPUESTO: S/. 7,962,350"+
+                        "<br>" +
+                        "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                        "PLAZO: 22/12/2020 - 19/08/2021"+
+                        "<br>" +
+                        "% AVANCE FÍSICO: 30%"+
+                        "<br>" +
+                        "BENEFICIARIOS: 5,657"+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+            },
+                  geometry: {
+                    type: "Point",
+                    coordinates: [-71.8957889, -13.5263137]
+                  }
+                },
+                {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE VIAS DE INTERCONEXION ENTRE LOS SECTORES VIA-CHINCHAYSUYO-HUAMPAR, VIA URUBAMBILLA-OSCCOLLO, VIA CHUÑUNA, VILLA LAS ROCAS-BRISAS DEL ARCO,Y VIA CRUZ VERDE- PISCIGRANJA",
+                  PubType: "Poroy",
+                  times:
+                  "<br>"+"CÓDIGO SNIP:"+
+                        "<br>" +
+                    "PRESUPUESTO:"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 75%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-72.0230035, -13.5033478]
+                }
+              },
+              {
+                type: "Feature",
+                properties: {
+                  name: "CONSTRUCCION DEL CENTRO CULTURAL Y MEJORAMIENTO DE SERVICIOS COMPLEMENTARIOS DE LA APV VILLA LAS ROCAS",
+                  PubType: "Poroy",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: "+
+                        "<br>" +
+                    "TIPO DE OBRA: Cultura"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 85%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-72.0072077, -13.5094752]
+                }
+              },
+              {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE 3 (INCA WIRACOCHA) Y CALLE S/N ENTRE EL COMITE I DEL PP.JJ. CONSTRUCCION CIVIL Y LA APV. AMAUTA",
+                  PubType: "Santiago",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/. 1,200,086.96"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 80%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-71.9898028, -13.52582]
+                }
+              },
+              {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE RAQUEL EN LA APV. PUCUTUPAMPA",
+                PubType: "Santiago",
+                times:
+                "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                  "PRESUPUESTO: S/. 593,508.38"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 70%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+        },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9883022, -13.524514]
+              }
+            },
+            {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR, PEATONAL Y ACONDICIONAMIENTO URBANO DE LA PROLONGACION PERA DEL PP.JJ SANTIAGO",
+                  PubType: "Santiago",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/. 1,387,303.59"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 50%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-71.981028, -13.5240587]
+                }
+              },
+              {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE BALTAZAR ZEGARRA Y PASAJE OTILIA RAMOS DEL CENTRO HISTÓRICO",
+                  PubType: "Santiago",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/. 952,916.07"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 40%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-71.9842935, -13.5251623]
+                }
+              },
+              {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE LOS SERVICIOS CULTURALES DEL MONUMENTO HISTÓRICO - IGLESIA SANTIAGO APOSTOL",
+                  PubType: "Santiago",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/."+
+                        "<br>" +
+                    "TIPO DE OBRA: Cultura"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 30%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-71.9832888, -13.525517]
+                }
+              },
+              {
+              type: "Feature",
+              properties: {
+                name: "REPARACIÓN DE PISTAS RENOVACIÓN DE SEÑALES DE TRÁNSITO EN LA CALLE ABRACITOS, ZETAS, PAMPA DEL CASTILLO, SANTO DOMINGO Y SAN AGUSTIN",
+                PubType: "Cusco",
+                times:
+                "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/. 1,098,682.31"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: 01/03/2021 "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 65%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+        },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.973932, -13.5194305]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                message: 'Baz',
+                iconSize: [40, 40],
+                name: "MEJORAMIENTO DE CONDICIONES ADECUADAS DE TRANSITABILIDAD PEATONAL Y VEHICULAR APV LOROPUÑUNA Y JARDINES DEL MIRADOR",
+                PubType: "Saylla",
+                times:
+                "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                  "PRESUPUESTO: S/. 754,071.40"+
+                        "<br>" +
+                  "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                  "PLAZO: 01/08/2018 - 31/12/2020 "+
+                        "<br>" +
+                  "% AVANCE FÍSICO: 75%"+
+                        "<br>" +
+                  "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+        },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.8586456, -13.5519554]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA APV CONDEBAMBA BAJA",
+                PubType: "Saylla",
+                times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                  "PRESUPUESTO: S/. 1,226,006.06"+
+                        "<br>" +
+                  "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                  "PLAZO: "+
+                        "<br>" +
+                  "% AVANCE FÍSICO: 70%"+
+                        "<br>" +
+                  "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+            },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.8310547, -13.5660805]
+              }
+            }]
       };
       map.on('load', function () {
         // Load an image from an external URL.
         map.loadImage(
-        'images/cat.png',
+        'images/work.png',
         function (error, image) {
         if (error) throw error;
         
@@ -805,6 +1170,15 @@
       }));
       
     </script>
+    <script>
+      $(window).on('load', function () {
+      setTimeout(function () {
+    $(".loader-page").css({visibility:"hidden",opacity:"0"})
+  }, 2000);
+     
+});
+    </script>
+    <script src="probando.js"></script>
   </body>
   
 </html>
