@@ -61,24 +61,24 @@
   }
   .sidebar header img {
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
   }
   .sidebar header {
     font-size: 22px;
     color: #fff;
     text-align: center;
-    line-height: 30px;
+    line-height: 13px;
     background: #063146;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     user-select: none;
   }
   .sidebar ul a {
     display: block;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
     line-height: 65px;
-    font-size: 20px;
+    font-size: 10px;
     color: #fff;
     padding-left: 40px;
     box-sizing: border-box;
@@ -125,7 +125,7 @@
 .cabecera-barra h1{
     float: left;
     font: normal 28px Cookie, Arial, Helvetica, sans-serif;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0;
 }
  
