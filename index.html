@@ -8,7 +8,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel = "icon" href = "images/qm1.png" type = "image/x-icon">
+    <link rel = "icon" href = "images/icono.png" type = "image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     
 
@@ -96,13 +96,14 @@
       margin-bottom: 0.2em;
       margin-left: 0;
       margin-right: 0;
+      font: 50 10px/15px 'Comic Sans MS', 'Helvetica Neue', Sans-serif;
 }
     p {
       color: navy;
       text-indent: 30px;
       text-transform: uppercase;
       font-size: 15px;
-      font: 400 15px/22px 'Shadows Into Light';
+      font: 400 15px/22px 'Comic Sans MS';
     }
     img {
       border-radius: 50%;
@@ -124,12 +125,10 @@
   <header class="cabecera-barra">
       <div class="cabecera-barra-1"  style="z-index: 10000; position: relative; top: 0;">
           <div class="cabecera-separador">
-   
-              <h1><a href="#">Qosqo<span>Mappers</span></a></h1>
+              <h1>  <a href="#"><img src="images/icono.png">Qosqo<span>Mappers</span></a> </h1>
               <nav>
                   <a href="#" class="activo">Inicio</a>
-                  <a href="#" >Acerca de</a>
-                  <a href="#">Nuestros proyectos</a>
+                  <a class="button" href="#popup1" >Acerca de nosotros</a>
                   <a><select class="select-css" id="pubTypeFilter" name="pubTypeFilter" >
                     <option value="">DISTRITOS</option>
                   </select></a>
@@ -140,15 +139,27 @@
       <div   style="z-index: 10000; position: relative; top: 0;">
         <input type="checkbox" id="check">
 
-  <label for="check">
-<i class="fa fa-bars" id="btn"></i>
-<i class="fa fa-times" id="cancle"></i>
+        <label for="check">
+      <i class="fa fa-bars" id="btn"></i>
+      <i class="fa fa-times" id="cancle"></i>
 
 
-  </label>
+        </label>
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <img src="images/qm1.png" alt="Qosqo Mappers" >
+            <h2>HOLA :</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content" style="text-align: justify;">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quisquam dignissimos ullam veniam dolorem, adipisci sapiente voluptatum fugit ducimus itaque neque dolorum rerum iure accusamus, quasi deleniti recusandae fugiat molestias.
+            </div>
+          </div>
+        </div>
   <div class="sidebar">
     <header><img src="images/qm1.png">
-    <h6>Mapa de las obras públicas inconclusas en la provincia del Cusco, para visibilizar...</h6>
+    <h6>Mapa de las obras públicas inconclusas en la provincia del Cusco, para visibilizar...
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem.
+    </h6>
     </header>
 <ul >
     <li><a href="#" id="fly1"><img src="images/sebas.png">SAN SEBASTIAN</a></li>
@@ -161,24 +172,25 @@
     </ul>
    <li>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
         <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="fa fa-youtube"></i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://becessj.github.io/OBRASINCONCLUSASQM/" class="google-plus"><i class="fa fa-facebook"></i></a>
+        <a href="https://becessj.github.io/OBRASINCONCLUSASQM/" class="google-plus"><i class="fa fa-github"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        
+       
         
       </div>
     </li>
    
 
 </div>
-<section></section>
-
       </div>
   </header>
   
   <body  style="margin: 0px; padding: 0px;">
     <div class="loader-page"></div>
     <div id="map"></div>
+    
     <div id="state-legend" class="legend">
       <h4>OBRAS PUBLICAS</h4>
       <div><img src="images/vias.png">&nbsp;&nbsp;Vías</div>
@@ -198,40 +210,47 @@
         attributionControl: false,
         center: [-71.93740322917174,-13.530044282718151], 
       });
-      var popup = new mapboxgl.Popup({ closeOnClick: false })
-          .setLngLat([-71.950364112854,
-                -13.533401139389131])
-          .setHTML('<h1>Proyecto de Qosqo Mappers bla bla bla blaaa....</h1>')
-          .addTo(map);
+     
           
+       /*PARA CARGAR LA CAPA DESDE GEOJSON EXTERNO 
+       map.on('load', function() {
+
+          map.addSource('trees', {
+            type: 'geojson',
+            data: './trees.geojson'
+          });
+          // add heatmap layer here
+          // add circle layer here
+          });*/
+                    
       map.on('load', function () {
-      map.addSource('route', {
-      'type': 'geojson',
-      'data': {
-      'type': 'Feature',
-      'properties': {},
-      'geometry': {
-      'type': 'LineString',
-      'coordinates': [
-                [
-                  -71.950364112854,
-                  -13.533401139389131
-                ],
-                [
-                  -71.93912029266357,
-                  -13.534360783531133
-                ],
-                [
-                  -71.92972183227539,
-                  -13.53565421081826
-                ],
-                [
-                  -71.92079544067381,
-                  -13.5364052298884
+        map.addSource('route', {
+        'type': 'geojson',
+        'data': {
+        'type': 'Feature',
+        'properties': {},
+        'geometry': {
+        'type': 'LineString',
+        'coordinates': [
+                  [
+                    -71.950364112854,
+                    -13.533401139389131
+                  ],
+                  [
+                    -71.93912029266357,
+                    -13.534360783531133
+                  ],
+                  [
+                    -71.92972183227539,
+                    -13.53565421081826
+                  ],
+                  [
+                    -71.92079544067381,
+                    -13.5364052298884
+                  ]
                 ]
-              ]
-      }
-      }
+        }
+        }
       });
       map.addLayer({
         'id': 'route',
@@ -1136,7 +1155,7 @@
             );
             });
             //Para girar la capa principal, movimiento
-            map.rotateTo(180, { duration: 10000 })
+            map.rotateTo(350, { duration: 10000 })
       map.on("load", function() {
         map.addLayer({
           id: "places",
