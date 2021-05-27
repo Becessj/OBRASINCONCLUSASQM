@@ -70,11 +70,11 @@
     text-align: center;
     line-height: 15px;
     background: #063146;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Comic Sans MS';
     user-select: none;
   }
   .sidebar ul a {
-    font: 400 20px/20px 'Comic Sans MS', 'Helvetica Neue', Sans-serif;
+    font: 400 20px/20px 'Comic Sans MS';
     display: block;
     height: 100%;
     width: 100%;
@@ -125,7 +125,7 @@
     margin: 0 5px 0 2px;
   }
 .cabecera-barra{
-    font:13px 'Comic Sans MS', Helvetica, sans-serif;
+    font:13px 'Comic Sans MS';
 }
  
 .cabecera-barra .cabecera-separador{
@@ -138,7 +138,7 @@
  
 .cabecera-barra h1{
     float: left;
-    font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+    font: normal 28px 'Comic Sans MS';
     line-height: 30px;
     margin: 0;
 }
@@ -164,7 +164,7 @@
 }
  
 .cabecera-barra .cabecera-barra-1 nav {
-    font:14px 'Comic Sans MS', Helvetica, sans-serif;
+    font:14px 'Comic Sans MS';
     line-height: 40px;
     float: left;
     margin: 0 0 0 60px;
@@ -431,7 +431,7 @@
   .popup h2 {
     margin-top: 0;
     color: #333;
-    font-family: 'Comic Sans MS', Arial, sans-serif;
+    font-family: 'Comic Sans MS';
   }
   .popup img {
     height: 250px;
