@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "icon" href = "images/icono.png" type = "image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v10.0" nonce="WD001sEv"></script>
     
 
 	 
@@ -188,6 +189,7 @@
   </header>
   
   <body  style="margin: 0px; padding: 0px;">
+    <div id="fb-root"></div>
     <div class="loader-page"></div>
     <div id="map"></div>
     
@@ -198,8 +200,10 @@
       <div><img src="images/cult.png">&nbsp;&nbsp;Cultura</div>
       <div><img src="images/edu.png">&nbsp;&nbsp;Educación</div>
       <div><img src="images/sal.png">&nbsp;&nbsp;Salud</div>
+      <div class="fb-share-button" data-href="https://becessj.github.io/OBRASINCONCLUSASQM/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+   
       </div>
-    <script>
+       <script>
       mapboxgl.accessToken =
         "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA";
       const map = new mapboxgl.Map({
