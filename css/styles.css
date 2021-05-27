@@ -125,7 +125,7 @@
     margin: 0 5px 0 2px;
   }
 .cabecera-barra{
-    font:13px Arial, Helvetica, sans-serif;
+    font:13px 'Comic Sans MS', Helvetica, sans-serif;
 }
  
 .cabecera-barra .cabecera-separador{
@@ -425,12 +425,13 @@
     width: 30%;
     position: relative;
     transition: all 5s ease-in-out;
+    font: 'Comic Sans MS';
   }
   
   .popup h2 {
     margin-top: 0;
     color: #333;
-    font-family: Tahoma, Arial, sans-serif;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
   }
   .popup img {
     height: 250px;
