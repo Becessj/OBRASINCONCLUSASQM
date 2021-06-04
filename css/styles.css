@@ -50,8 +50,12 @@
     height: 100%;
     background: #233BB0;
     transition: all 0.5s ease;
-    
-    
+    overflow-y: scroll;
+    margin-bottom: 120px;
+      
+  } 
+  .sidebar::-webkit-scrollbar {
+    width: 8px;
   }
   .sidebar img{
     height: 30px;
@@ -75,30 +79,44 @@
     margin-left: 250px;
   }
   .sidebar header img {
-    width: 240px;
-    height: 160px;
+    width: 265px;
+    height: 190px;
+    padding: 0px;
   }
   .sidebar header {
-    font-size: 22px;
+    font-size: 25px;
     color: #ffffff;
-    text-align: center;
+    text-align: justify;
     line-height: 15px;
-    background: #323A40;
+    background: #233BB0;
     font-family: 'Open Sans';
     user-select: none;
+    padding: 0px;
+  }
+  .sidebar header p {
+    color: rgb(255, 255, 255);
+      text-indent: 1px;
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      Padding: 0px,0px,0px,0px;
+      font-size: 11px;
+
   }
   .sidebar ul a {
     font: 400 20px/20px 'Open Sans';
     display: block;
     height: 100%;
     width: 100%;
-    line-height: 50px;
+    line-height: 40px;
     font-size: 15px;
     color: rgb(252, 252, 250);
     padding-left: 40px;
     box-sizing: border-box;
     border-top: 1px solid rgba(255,255,255,0.1);
-   
+    display: block;
     transition: 0.4s;
   }
   .sidebar ul img {
@@ -117,20 +135,21 @@
   }
   /* Social Links */
   .social-links i {
-    padding: 15px;
+    padding: 5px;
     margin-left: 16px;
     margin-top: 16px;
-    border-radius: 50%;
+    border-radius: 30%;
     color: #fff;
     background: #323A40;
     font-size: 15px;
+    align-items: center;
   }
   /* icons hover effect */
   .social-links i:hover {
     background: #ad84bf;
   }
   .sidebar header p {
-    padding: 15px;
+    padding: 10px;
   }
   
 
