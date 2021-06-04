@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>QOSQO MAPPERS-OBRAS INCONCLUSAS</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1" />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel = "icon" href = "images/icono.png" type = "image/x-icon">
+    <link rel = "icon" href = "images/iconito.png" type = "image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v10.0" nonce="WD001sEv"></script>
-    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 	 
   </head>
@@ -42,7 +43,7 @@
     }
     .mapboxgl-popup-close-button {
       display: inline;
-      font: 400 20px/20px 'Comic Sans MS', 'Helvetica Neue', Sans-serif;
+      font: 400 20px/20px 'Open Sans', 'Helvetica Neue', Sans-serif;
     }
     .mapboxgl-popup-content {
       padding: 0;
@@ -55,7 +56,7 @@
     }
 
     .mapboxgl-popup-content h3 {
-      font: 400 15px/22px 'Comic Sans MS';
+      font: 400 15px/22px 'Open Sans';
       background: #d61c1c;
       text-align: center;
       color: #fff;
@@ -97,79 +98,231 @@
       margin-bottom: 0.2em;
       margin-left: 0;
       margin-right: 0;
-      font: 50 10px/15px 'Comic Sans MS', 'Helvetica Neue', Sans-serif;
+      font: 50 10px/15px 'Open Sans', 'Helvetica Neue', Sans-serif;
 }
     p {
       color: navy;
       text-indent: 30px;
       text-transform: uppercase;
       font-size: 15px;
-      font: 400 15px/22px 'Comic Sans MS';
+      font: 400 15px/22px 'Open Sans';
     }
-    img {
+    /*img {
       border-radius: 50%;
       height: 30px;
       width: 30px;
       margin-left: 10px;
       vertical-align:middle;
     
-    }
-    .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50px;
-      height: 50px;
-    }
+    }*/
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+     
+
+      html {
+          font-size: 15px;
+          font-family: 'Open Sans', sans-serif;
+      }
+
+      li {
+          list-style: none;
+      }
+
+      a {
+          text-decoration: none;
+      }
+      .header{
+          border-bottom: 1px solid #E2E8F0;
+      }
+
+      .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 1.5rem;
+          background-color: #233BB0;
+      }
+      .hamburger {
+          display: none;
+      }
+
+      .bar {
+          display: block;
+          width: 25px;
+          height: 3px;
+          margin: 5px auto;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          background-color: #040505;
+      }
+      .nav-menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .nav-item {
+          margin-left: 5rem;
+      }
+
+      .nav-link{
+          font-size: 1.6rem;
+          font-weight: 400;
+          color: #fefffe;
+      }
+
+      .nav-link:hover{
+          color: #050505;
+      }
+
+      .nav-logo {
+          font-size: 2.1rem;
+          font-weight: 20;
+          color: #482ff7;
+      }
+      .nav-logo img{
+        height: 60px;
+        width: 220px;
+      }
+      @media only screen and (max-width: 768px) {
+          .nav-menu {
+              position: fixed;
+              left: -100%;
+              top: 5rem;
+              flex-direction: column;
+              background-color: rgb(103, 208, 235);
+              width: 100%;
+              border-radius: 10px;
+              text-align: center;
+              transition: 0.3s;
+              box-shadow:
+                  0 10px 27px rgba(0, 0, 0, 0.05);
+          }
+
+          .nav-menu.active {
+              left: 0;
+          }
+
+          .nav-item {
+              margin: 2.5rem 0;
+          }
+
+          .hamburger {
+              display: block;
+              cursor: pointer;
+          }
+
+      }
+      .hamburger.active .bar:nth-child(2) {
+              opacity: 0;
+          }
+
+          .hamburger.active .bar:nth-child(1) {
+              transform: translateY(8px) rotate(45deg);
+          }
+
+          .hamburger.active .bar:nth-child(3) {
+              transform: translateY(-8px) rotate(-45deg);
+          }
+          button.green-button{
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            padding: 7px 20px !important;
+            margin: 0px 0px 0px 10px;
+            background-color: transparent;
+            border: 3px solid #feffff;
+            border-radius: 35px;
+            font-weight: bold;
+          }
+          select {
+            border: 3px solid #feffff;
+            margin: 0px 0px 0px 10px;
+              border-radius: 35px;
+              color: #FFFFFF;
+              background-color: transparent;
+              font-size: 15px;
+              font-weight: bold;
+              padding: 6px 6px !important;
+              width: 100px;
+              *width: 350px;
+              *background: #58B14C;
+            }
+            select:hover{
+              background-color: rgb(214, 255, 32);
+              cursor: pointer;
+            }
+
+          button.green-button a {
+            text-decoration: none;
+            color: #fff;
+          }
+
+          button.green-button:hover{
+            background-color: rgb(214, 255, 32);
+            cursor: pointer;
+          
+          }
+          button.green-button:hover a{
+          color: #000000;
+          }
+          
   </style>
   
-  <header class="cabecera-barra">
-      <div class="cabecera-barra-1"  style="z-index: 10000; position: relative; top: 0;">
-          <div class="cabecera-separador">
-              <h1>  <a href="#"><img src="images/icono.png">Qosqo<span>Mappers</span></a> </h1>
-              <nav>
-                  <a href="#" class="activo">Inicio</a>
-                  <a class="button" href="#popup1" >Acerca de nosotros</a>
-                  <a><select class="select-css" id="pubTypeFilter" name="pubTypeFilter" >
-                    <option value="">DISTRITOS</option>
-                  </select></a>
-              </nav>
+		<header class="header" style="z-index: 10000; position: relative; top: 0;">
+      <nav class="navbar">
+        <a href="#" class="nav-logo"><img src="images/qm1.png"></a> </h1>
+          <ul class="nav-menu">
+              <li class="nav-item">
+                  <button class="green-button"><a href="#popup1" class="manual-optin-trigger" data-optin-slug="atefh5rvxazforll">Acerca de nosotros</a></button>
+              </li>
+            <li class="nav-item">
+              <a><select class="green-button" id="pubTypeFilter" name="pubTypeFilter" >
+                <option value="">Distritos</option>
+              </select></a>
+            </li>
+           
+          </ul>
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
           </div>
-      </div>
+      </nav>
+</header>
       
       <div   style="z-index: 10000; position: relative; top: 0;">
-        <input type="checkbox" id="check">
+            <input type="checkbox" id="check">
 
-        <label for="check">
-      <i class="fa fa-bars" id="btn"></i>
-      <i class="fa fa-times" id="cancle"></i>
-
-
-        </label>
-        <div id="popup1" class="overlay">
-          <div class="popup">
-            <img src="images/qm1.png" alt="Qosqo Mappers" >
-            <h2>HOLA :</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content" style="text-align: justify;">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quisquam dignissimos ullam veniam dolorem, adipisci sapiente voluptatum fugit ducimus itaque neque dolorum rerum iure accusamus, quasi deleniti recusandae fugiat molestias.
-            </div>
-          </div>
+            <label for="check">
+            <i class="fa fa-bars" id="btn"></i>
+            <i class="fa fa-times" id="cancle"></i>
+            </label>
+            <div id="popup1" class="overlay">
+              <div class="popup">
+                <img src="images/pop.png" alt="Qosqo Mappers" >
+                <a class="close" href="#">&times;</a>
+                <div class="content" style="text-align: justify;">
+                  Somos un voluntariado que tiene como objetivo lograr que estudiantes y egresados de la 
+                  Universidad Nacional San Antonio Abad del Cusco, aprendan a utilizar mapas digitales y 
+                  nuevas tecnologías como herramientas para la investigación y desarrollo de proyectos con 
+                  fines sociales.  
+                </div>
+              </div>
         </div>
   <div class="sidebar">
-    <header><img src="images/qm1.png">
-    <h6>Mapa de las obras públicas inconclusas en la provincia del Cusco, para visibilizar...
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem.
-    </h6>
+    <header><img src="images/opi.png">
+        <h6>Mapa de obras públicas en ejecución de la provincia del Cusco. Descubre que obras 
+          se están realizando en tu distrito, si se cumplen los plazos y satisface la 
+          necesidad de los ciudadanos.
+        </h6>
     </header>
-<ul >
-    <li><a href="#" id="fly1"><img src="images/sebas.png">SAN SEBASTIAN</a></li>
-    <li><a href="#" id="fly2"><img src="images/santi.png"></i>SANTIAGO</a></li>
-    <li><a href="#" id="fly3"><img src="images/wan.png">WANCHAQ</a></li>
-    <li><a href="#" id="fly4"><img src="images/say.png">SAYLLA</a></li>
-    <li><a href="#" id="fly5"><img src="images/cusco.png">CUSCO</a></li>
-    <li><a href="#" id="fly6"><img src="images/cusco.png">POROY</a></li>
-    <li><a href="#" id="fly7"><img src="images/jero.png">SAN JERONIMO</a></li>
+    <ul >
+        <li><a href="#" id="fly1"><img src="images/sebas.png">SAN SEBASTIAN</a></li>
+        <li><a href="#" id="fly2"><img src="images/santi.png"></i>SANTIAGO</a></li>
+        <li><a href="#" id="fly3"><img src="images/wan.png">WANCHAQ</a></li>
+        <li><a href="#" id="fly4"><img src="images/say.png">SAYLLA</a></li>
+        <li><a href="#" id="fly5"><img src="images/cusco.png">CUSCO</a></li>
+        <li><a href="#" id="fly6"><img src="images/cusco.png">POROY</a></li>
+        <li><a href="#" id="fly7"><img src="images/jero.png">SAN JERONIMO</a></li>
     </ul>
    <li>
       <div class="social-links">
@@ -177,16 +330,11 @@
         <a href="https://becessj.github.io/OBRASINCONCLUSASQM/" class="google-plus"><i class="fa fa-facebook"></i></a>
         <a href="https://becessj.github.io/OBRASINCONCLUSASQM/" class="google-plus"><i class="fa fa-github"></i></a>
         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        
-       
-        
       </div>
     </li>
-   
-
 </div>
       </div>
-  </header>
+  
   
   <body  style="margin: 0px; padding: 0px;">
     <div id="fb-root"></div>
@@ -195,30 +343,29 @@
     
     <div id="state-legend" class="legend">
       <h4>OBRAS PUBLICAS</h4>
-      <div><img src="images/vias.png">&nbsp;&nbsp;Vías</div>
-      <div><img src="images/esp.png">&nbsp;&nbsp;Espacio Público</div>
-      <div><img src="images/cult.png">&nbsp;&nbsp;Cultura</div>
-      <div><img src="images/edu.png">&nbsp;&nbsp;Educación</div>
-      <div><img src="images/sal.png">&nbsp;&nbsp;Salud</div>
+      <div><img src="images/via.svg">&nbsp;&nbsp;Vías</div>
+      <div><img src="images/ep.svg">&nbsp;&nbsp;Espacio Público</div>
+      <div><img src="images/cul.svg">&nbsp;&nbsp;Cultura</div>
+      <div><img src="images/ed.svg">&nbsp;&nbsp;Educación</div>
+      <div><img src="images/sal.svg">&nbsp;&nbsp;Salud</div>
       <div class="fb-share-button" data-href="https://becessj.github.io/OBRASINCONCLUSASQM/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
    
       </div>
        <script>
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA";
-      const map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/mapbox/dark-v10",
-        zoom: 13,
-        minZoom: 3,
-        attributionControl: false,
-        center: [-71.93740322917174,-13.530044282718151], 
-      });
+          mapboxgl.accessToken =
+            "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA";
+          const map = new mapboxgl.Map({
+            container: "map",
+            style: "mapbox://styles/mapbox/dark-v10",
+            zoom: 13,
+            minZoom: 3,
+            attributionControl: false,
+            center: [-71.93740322917174,-13.530044282718151], 
+          });
      
           
        /*PARA CARGAR LA CAPA DESDE GEOJSON EXTERNO 
        map.on('load', function() {
-
           map.addSource('trees', {
             type: 'geojson',
             data: './trees.geojson'
@@ -358,17 +505,17 @@
               name: "linea linea",
               PubType: "LINEA PUNTO",
               times:
-              '<strong></strong><p><a href="https://docs.google.com/spreadsheets/d/1zKpearCZHKRBT8Zx4Po84MuAZrf6m6odMx1kNDvEh6s/edit#gid=0" target="_blank" title="Opens in a new window">CLIC AQUÍ</a></p>'
-              +"<br>"+"CÓDIGO SNIP: 378993"+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> 378993"+
                 "<br>" +
-                "PRESUPUESTO: S/. 1,753,170.12"+
+                "<strong>PRESUPUESTO:</strong> S/. 1,753,170.12"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA:</strong> Vías"+
                 "<br>" +
-                "PLAZO: 03/09/2020 - 30/04/2021"+
-                "% AVANCE FÍSICO: 55%"+
+                "<strong>PLAZO:</strong> 03/09/2020 - 30/04/2021"+
                 "<br>" +
-                "BENEFICIARIOS: 989"+
+                "<strong>% AVANCE FÍSICO:</strong> 55%"+
+                "<br>" +
+                "<strong>BENEFICIARIOS:</strong> 989"+
                 "<br>"+" "+
                 "<br>"
             },
@@ -402,17 +549,17 @@
               name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA AV. JUSTICIA Y JR. LA LIBERTAD EN LA URB. SAN FRANCISCO Y LA AV. LA CONVENCION DE LA URB. PROGRESO (ENTRE EL JR. LA VERDAD Y JR. SAYLLA)",
               PubType: "Wanchaq",
               times:
-              "<br>"+"CÓDIGO SNIP: 2412227"+
+              "<br>"+"<strong>CÓDIGO SNIP:</strong> 2412227"+
 	          "<br>" +
-            "PRESUPUESTO: S/. 3,607,891.21"+
+            "<strong>PRESUPUESTO:</strong> S/. 3,607,891.21"+
             "<br>" +
-            "TIPO DE OBRA: Vías"+
+            "<strong>TIPO DE OBRA:</strong> Vías"+
             "<br>" +
-            "PLAZO: 23/09/2020 - 19/07/2021"+
+            "<strong>PLAZO:</strong> 23/09/2020 - 19/07/2021"+
             "<br>" +
-            "% AVANCE FÍSICO: 55%"+
+            "<strong>% AVANCE FÍSICO:</strong> 55%"+
             "<br>" +
-            "BENEFICIARIOS: 1476"+
+            "<strong>BENEFICIARIOS:</strong> 1476"+
                 "<br>"+" "+
                 "<br>"
             },
@@ -428,16 +575,16 @@
               name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA AV. HUAMANTIANA",
               PubType: "Wanchaq",
               times:
-              "<br>"+"CÓDIGO SNIP: 378993"+
+              "<br>"+"<strong>CÓDIGO SNIP:</strong> 378993"+
                 "<br>" +
-                "PRESUPUESTO: S/. 1,753,170.12"+
+                "<strong>PRESUPUESTO:</strong> S/. 1,753,170.12"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA:</strong> Vías"+
                 "<br>" +
-                "PLAZO: 03/09/2020 - 30/04/2021"+
-                "% AVANCE FÍSICO: 55%"+
+                "<strong>PLAZO:</strong> 03/09/2020 - 30/04/2021"+
+                "<strong>% AVANCE FÍSICO:</strong> 55%"+
                 "<br>" +
-                "BENEFICIARIOS: 989"
+                "<strong>BENEFICIARIOS:</strong> 989"
                 +
                 "<br>"+" "+
                 "<br>"
@@ -454,17 +601,17 @@
               name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL DE LAS CALLES DE LA URBANIZACION JOSE CARLOS MARIATEGUI, CENTRO POBLADO DE WANCHAQ",
               PubType: "Wanchaq",
               times:
-              "<br>"+"CÓDIGO SNIP: 2385413"+
+              "<br>"+"<strong>CÓDIGO SNIP:</strong> 2385413"+
                 "<br>" +
-                "PRESUPUESTO: S/. 2,824,357.20"+
+                "<strong>PRESUPUESTO:</strong> S/. 2,824,357.20"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA:</strong> Vías"+
                 "<br>" +
-                "PLAZO: 19/08/2020 - 15/04/2021"+
+                "<strong>PLAZO:</strong> 19/08/2020 - 15/04/2021"+
                 "<br>" +
-                "% AVANCE FÍSICO: 60%"+
+                "<strong>% AVANCE FÍSICO:</strong> 60%"+
                 "<br>" +
-                "BENEFICIARIOS: 998"+
+                "<strong>BENEFICIARIOS:</strong> 998"+
                 "<br>"+" "+
                 "<br>"
             },
@@ -480,17 +627,17 @@
               name: "MEJORAMIENTO DE LOS SERVICIOS DE EDUCACIÓN INICIAL DE LA I.E. MARÍA TRINIDAD ENRIQUEZ DE LA URBANIZACIÓN TTIO",
               PubType: "Wanchaq",
               times:
-              "<br>"+"CÓDIGO SNIP:"+
+              "<br>"+"<strong>CÓDIGO SNIP:</strong>"+
                 "<br>" + 
-                "PRESUPUESTO: S/. 3,036,193.52"+
+                "<strong>PRESUPUESTO:</strong> S/. 3,036,193.52"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA:</strong> Vías"+
                 "<br>" +
-                "PLAZO:"+
+                "<strong>PLAZO:</strong>"+
                 "<br>" + 
-                  "% AVANCE FÍSICO: 87%"+
+                  "<strong>% AVANCE FÍSICO:</strong> 87%"+
                 "<br>" +
-                "BENEFICIARIOS: "+
+                "<strong>BENEFICIARIOS: </strong>"+
                 "<br>"+" "+
                 "<br>"
             },
@@ -506,17 +653,17 @@
               name: "MEJORAMIENTO DE LA TRANSITABILIDAD PEATONAL Y VEHICULAR DE LA CALLE REPUBLICA DE ARGENTINA",
               PubType: "Wanchaq",
               times:
-              "<br>"+"CÓDIGO SNIP: "+
+              "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                 "<br>" +
-                "PRESUPUESTO: S/. 1,354,814.00"+
+                "<strong>PRESUPUESTO:</strong> S/. 1,354,814.00"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA:</strong> Vías"+
                 "<br>" +
-                "PLAZO: "+
+                "<strong>PLAZO:</strong> "+
                 "<br>" +
-                "% AVANCE FÍSICO: 20%"+
+                "<strong>% AVANCE FÍSICO:</strong> 20%"+
                 "<br>" +
-                "BENEFICIARIOS: "+
+                "<strong>BENEFICIARIOS: </strong>"+
                 "<br>"+" "+
                 "<br>"
             },
@@ -532,17 +679,17 @@
                 name: "MEJORAMIENTO Y CONSTRUCCION DE MURO DE CONTENCION AVENIDA JUSTICIA Y LA CONVENCION",
                 PubType: "Wanchaq",
                 times:
-                "<br>"+"CÓDIGO SNIP: "+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                 "<br>" +
-                "PRESUPUESTO: S/. 1,339,700.00"+
+                "<strong>PRESUPUESTO:</strong> S/. 1,339,700.00"+
                 "<br>" +
-                "TIPO DE OBRA: Espacios públicos"+
+                "<strong>TIPO DE OBRA:</strong> Espacios públicos"+
                 "<br>" +
-                "PLAZO: "+
+                "<strong>PLAZO:</strong> "+
                 "<br>" +
-                "% AVANCE FÍSICO: 90% "+
+                "<strong>% AVANCE FÍSICO:</strong> 90% "+
                 "<br>" +
-                "BENEFICIARIOS: "+
+                "<strong>BENEFICIARIOS:</strong> "+
                 "<br>"+" "+
                 "<br>"
               },
@@ -558,17 +705,17 @@
                 name: "MEJORAMIENTO Y AMPLIACIÓN DE LA OFERTA DE SERVICIOS EDUCATIVOS DE NIVEL SECUNDARIO DE LA I. E N°50025 - DANIEL ESTRADA PÉREZ",
                 PubType: "Wanchaq",
                 times:
-                "<br>"+"CÓDIGO SNIP: "+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                 "<br>" +
-                "PRESUPUESTO: "+
+                "<strong>PRESUPUESTO:</strong> "+
                 "<br>" +
-                "TIPO DE OBRA: "+
+                "<strong>TIPO DE OBRA:</strong> "+
                 "<br>" +
-                "PLAZO: "+
+                "<strong>PLAZO:</strong> "+
                 "<br>" +
-                "% AVANCE FÍSICO: 80% "+
+                "<strong>% AVANCE FÍSICO:</strong> 80% "+
                 "<br>" +
-                "BENEFICIARIOS: "+
+                "<strong>BENEFICIARIOS:</strong> "+
                 "<br>"+" "+
                 "<br>"
               },
@@ -584,17 +731,17 @@
                 name: "RECUPERACION DEL MONUMENTO VIRREINAL RELIGIOSO TEMPLO DE SAN SEBASTIAN ARQUITECTURA Y ELEMENTOS DE INFRAESTRUCTURA FISICA DAÑADOS POR EL INCENDIO 2016",
                 PubType: "San Sebastian",
                 times:
-                "<br>"+"CÓDIGO SNIP: 2383182"+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> 2383182"+
                 "<br>" +
-                "PRESUPUESTO: S/ 4,008,778.77"+
+                "<strong>PRESUPUESTO:</strong> S/ 4,008,778.77"+
                 "<br>" +
-                "TIPO DE OBRA: Cultural"+
+                "<strong>TIPO DE OBRA:</strong> Cultural"+
                 "<br>" +
-                "PLAZO: 09/2021 - 09/2020"+
+                "<strong>PLAZO:</strong> 09/2021 - 09/2020"+
                 "<br>" +
-                "% AVANCE FÍSICO: 80% "+
+                "<strong>% AVANCE FÍSICO:</strong> 80% "+
                 "<br>" +
-                "BENEFICIARIOS: "+
+                "<strong>BENEFICIARIOS:</strong> "+
                 "<br>"+" "+
                 "<br>"
               },
@@ -610,17 +757,17 @@
                 name: "MEJORAMIENTO, AMPLIACIÓN DEL SERVICIO DE EDUCACIÓN PRIMARIA EN LA I.E. N 50014 TANKARPATA SECTOR TANKARPATA",
                 PubType: "San Sebastian",
                 times:
-                "<br>"+"CÓDIGO SNIP: 266551"+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> 266551"+
                 "<br>" +
-                "PRESUPUESTO: S/ 5,582,619"+
+                "<strong>PRESUPUESTO:</strong> S/ 5,582,619"+
                 "<br>" +
-                "TIPO DE OBRA: Educación"+
+                "<strong>TIPO DE OBRA:</strong> Educación"+
                 "<br>" +
-                "PLAZO: 04/2019 - 05/2020"+
+                "<strong>PLAZO: </strong>04/2019 - 05/2020"+
                 "<br>" +
-                "% AVANCE FÍSICO: 70%"+
+                "<strong>% AVANCE FÍSICO:</strong> 70%"+
                 "<br>" +
-                "BENEFICIARIOS: 2100"+
+                "<strong>BENEFICIARIOS:</strong> 2100"+
                 "<br>"+" "+
                 "<br>"
               },
@@ -636,17 +783,17 @@
                 name: "MEJORAMIENTO DEL CEMENTERIO CENTRAL",
                 PubType: "San Sebastian",
                 times:
-                "<br>"+"CÓDIGO SNIP: 236235"+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> 236235"+
                 "<br>" +
-                "PRESUPUESTO: S/ 1,970,167.52"+
+                "<strong>PRESUPUESTO:</strong> S/ 1,970,167.52"+
                 "<br>" +
-                "TIPO DE OBRA: Espacio público"+
+                "<strong>TIPO DE OBRA:</strong> Espacio público"+
                 "<br>" +
-                "PLAZO: 03/2020 - 01/2021"+
+                "<strong>PLAZO:</strong> 03/2020 - 01/2021"+
                 "<br>" +
-                "% AVANCE FÍSICO: 90%"+
+                "<strong>% AVANCE FÍSICO:</strong> 90%"+
                 "<br>" +
-                "BENEFICIARIOS: 1038"+
+                "<strong>BENEFICIARIOS:</strong> 1038"+
                 "<br>"+" "+
                 "<br>"
               },
@@ -662,17 +809,17 @@
                 name: "MEJORAMIENTO DE ESCALINATAS EN LAS DIFERENTES APVS DE LA MARGEN IZQUIERDA Y DERECHA",
                 PubType: "San Sebastian",
                 times:
-                "<br>"+ "CÓDIGO SNIP: 2485928"+
+                "<br>"+ "<strong>CÓDIGO SNIP:</strong> 2485928"+
                 "<br>" +
-                "PRESUPUESTO: S/ 1,698,159.21"+
+                "<strong>PRESUPUESTO:</strong> S/ 1,698,159.21"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA:</strong> Vías"+
                 "<br>" +
-                "PLAZO: 08/2020 - 04/2021"+
+                "<strong>PLAZO:</strong> 08/2020 - 04/2021"+
                 "<br>" +
-                "% AVANCE FÍSICO: 65%"+
+                "<strong>% AVANCE FÍSICO:</strong> 65%"+
                 "<br>" +
-                "BENEFICIARIOS: 7292"+
+                "<strong>BENEFICIARIOS:</strong> 7292"+
                 "<br>"+" "+
                 "<br>"
               },
@@ -688,17 +835,17 @@
                 name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA CALLE TENERIA SONDOR, PSJ. TENERIA, CALLE TICAPATA,PSJ.NNOMINADO A (PRECURSORES), PSJ. B (HIPOLITO HUNANUE), PSJ INNOMINADO C (LUCEROS DEL AMANECER), URB TENERIA",
                 PubType: "San Sebastian",
                 times:
-                "<br>"+ "CÓDIGO SNIP: 155941"+
+                "<br>"+ "<strong>CÓDIGO SNIP:</strong> 155941"+
                 "<br>" +
-                "PRESUPUESTO: S/ 1,437,244.02"+
+                "<strong>PRESUPUESTO:</strong> S/ 1,437,244.02"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA: </strong>Vías"+
                 "<br>" +
-                "PLAZO: 03/2020 - 10/2020"+
+                "<strong>PLAZO: </strong>03/2020 - 10/2020"+
                 "<br>" +
-                "% AVANCE FÍSICO: 30% "+
+                "<strong>% AVANCE FÍSICO: </strong>30% "+
                 "<br>" +
-                "BENEFICIARIOS: 6661"+
+                "<strong>BENEFICIARIOS:</strong> 6661"+
                 "<br>"+" "+
                 "<br>"
               },
@@ -740,17 +887,17 @@
                 name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LAS CALLES SIN NOMBRE Y ARCANGELES ENTRE LAS APVS SANTA ROSA COMITE 04, TRES CRUCES Y URB. SAN GABRIEL",
                 PubType: "San Sebastian",
                 times:
-                "<br>"+ "CÓDIGO SNIP: 270645"+
+                "<br>"+ "<strong>CÓDIGO SNIP:</strong> 270645"+
                 "<br>" +
-                "PRESUPUESTO: S/ 2,749,287.34"+
+                "<strong>PRESUPUESTO:</strong> S/ 2,749,287.34"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA:</strong> Vías"+
                 "<br>" +
-                "PLAZO: 12/2018 - 10/2019"+
+                "<strong>PLAZO:</strong> 12/2018 - 10/2019"+
                 "<br>" +
-                "% AVANCE FÍSICO: 70% "+
+                "<strong>% AVANCE FÍSICO:</strong> 70% "+
                 "<br>" +
-                "BENEFICIARIOS: 600"+
+                "<strong>BENEFICIARIOS:</strong> 600"+
                 "<br>"+" "+
                 "<br>"+" "+
                 "<br>"
@@ -766,17 +913,17 @@
                 name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN LAS CALLES LOS GERANIOS, LAS MAGNOLIAS, GIRASOLES, KANTUS Y AV. PICOL DE LA APV MACHU PICOL",
                 PubType: "San Jerónimo",
                 times:
-                "<br>"+"CÓDIGO SNIP: 262483"+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> 262483"+
                 "<br>" +
-                "PRESUPUESTO: S/. 3,256,052"+
+                "<strong>PRESUPUESTO:</strong> S/. 3,256,052"+
                 "<br>" +
-                "TIPO DE OBRA: Vías"+
+                "<strong>TIPO DE OBRA:</strong> Vías"+
                 "<br>" +
-                "PLAZO: 11/03/2019 - 29/12/2020"+
+                "<strong>PLAZO:</strong> 11/03/2019 - 29/12/2020"+
                 "<br>" +
-                "% AVANCE FÍSICO: 80%"+
+                "<strong>% AVANCE FÍSICO:</strong> 80%"+
                 "<br>" +
-                "BENEFICIARIOS: 2,065"+
+                "<strong>BENEFICIARIOS:</strong> 2,065"+
                 "<br>"+" "+
                 "<br>"+" "+
                 "<br>"
@@ -793,16 +940,17 @@
                       name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA A.P.V. ALTIVA CANAS",
                       PubType: "San Jerónimo",
                       times:
-                      "<br>"+"CÓDIGO SNIP: 324579"+"<br>" +
-                        "PRESUPUESTO: S/. 8,257,928"+
+                      "<br>"+"<strong>CÓDIGO SNIP:</strong> 324579"+
+                      "<br>" +
+                        "<strong>PRESUPUESTO:</strong> S/. 8,257,928"+
                         "<br>" +
-                        "TIPO DE OBRA: Vías"+
+                        "<strong>TIPO DE OBRA:</strong>Vías"+
                         "<br>" +
-                        "PLAZO: 17/12/2020 - 23/08/2021"+
+                        "<strong>PLAZO:</strong> 17/12/2020 - 23/08/2021"+
                         "<br>" +
-                        "% AVANCE FÍSICO: 35%"+
+                        "<strong>% AVANCE FÍSICO:</strong> 35%"+
                         "<br>" +
-                        "BENEFICIARIOS: 2,959"+
+                        "<strong>BENEFICIARIOS:</strong> 2,959"+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -819,17 +967,17 @@
                     name: "MEJORAMIENTO DEL PARQUE Y ZONAS DE ENTRETENIMIENTO EN LA APV. HUAYNA PICOL",
                     PubType: "San Jerónimo",
                     times:
-                    "<br>"+"CÓDIGO SNIP: 2437279"+
+                    "<br>"+"<strong>CÓDIGO SNIP:</strong> 2437279"+
                         "<br>" +
-                        "PRESUPUESTO: S/. 596,872"+
+                        "<strong>PRESUPUESTO:</strong> S/. 596,872"+
                         "<br>" +
-                        "TIPO DE OBRA: Espacio Público"+
+                        "<strong>TIPO DE OBRA:</strong> Espacio Público"+
                         "<br>" +
-                        "PLAZO: 24/09/2020 - 03/01/2021"+
+                        "<strong>PLAZO:</strong> 24/09/2020 - 03/01/2021"+
                         "<br>" +
-                        "% AVANCE FÍSICO: 90%"+
+                        "<strong>% AVANCE FÍSICO:</strong> 90%"+
                         "<br>" +
-                        "BENEFICIARIOS: 1,527"+
+                        "<strong>BENEFICIARIOS:</strong> 1,527"+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -846,17 +994,17 @@
                     name: "CREACION DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA APV HUAYNA PICOL",
                     PubType: "San Jerónimo",
                     times:
-                    "<br>"+"CÓDIGO SNIP: 2437503"+
+                    "<br>"+"<strong>CÓDIGO SNIP:</strong> 2437503"+
                         "<br>" +
-                        "PRESUPUESTO: S/. 7,962,350"+
+                        "<strong>PRESUPUESTO:</strong> S/. 7,962,350"+
                         "<br>" +
-                        "TIPO DE OBRA: Vías"+
+                        "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                        "PLAZO: 22/12/2020 - 19/08/2021"+
+                        "<strong>PLAZO:</strong> 22/12/2020 - 19/08/2021"+
                         "<br>" +
-                        "% AVANCE FÍSICO: 30%"+
+                        "<strong>% AVANCE FÍSICO:</strong> 30%"+
                         "<br>" +
-                        "BENEFICIARIOS: 5,657"+
+                        "<strong>BENEFICIARIOS:</strong> 5,657"+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -873,17 +1021,17 @@
                   name: "MEJORAMIENTO DE VIAS DE INTERCONEXION ENTRE LOS SECTORES VIA-CHINCHAYSUYO-HUAMPAR, VIA URUBAMBILLA-OSCCOLLO, VIA CHUÑUNA, VILLA LAS ROCAS-BRISAS DEL ARCO,Y VIA CRUZ VERDE- PISCIGRANJA",
                   PubType: "Poroy",
                   times:
-                  "<br>"+"CÓDIGO SNIP:"+
+                  "<br>"+"<strong>CÓDIGO SNIP:</strong>"+
                         "<br>" +
-                    "PRESUPUESTO:"+
+                    "<strong>PRESUPUESTO:</strong>"+
                         "<br>" +
-                    "TIPO DE OBRA: Vías"+
+                    "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                    "PLAZO: "+
+                    "<strong>PLAZO:</strong> "+
                         "<br>" +
-                    "% AVANCE FÍSICO: 75%"+
+                    "<strong>% AVANCE FÍSICO:</strong> 75%"+
                         "<br>" +
-                    "BENEFICIARIOS: "+
+                    "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -900,17 +1048,17 @@
                   name: "CONSTRUCCION DEL CENTRO CULTURAL Y MEJORAMIENTO DE SERVICIOS COMPLEMENTARIOS DE LA APV VILLA LAS ROCAS",
                   PubType: "Poroy",
                   times:
-                  "<br>"+"CÓDIGO SNIP: "+
+                  "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                    "PRESUPUESTO: "+
+                    "<strong>PRESUPUESTO:</strong> "+
                         "<br>" +
-                    "TIPO DE OBRA: Cultura"+
+                    "<strong>TIPO DE OBRA:</strong> Cultura"+
                         "<br>" +
-                    "PLAZO: "+
+                    "<strong>PLAZO:</strong> "+
                         "<br>" +
-                    "% AVANCE FÍSICO: 85%"+
+                    "<strong>% AVANCE FÍSICO:</strong> 85%"+
                         "<br>" +
-                    "BENEFICIARIOS: "+
+                    "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -927,17 +1075,17 @@
                   name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE 3 (INCA WIRACOCHA) Y CALLE S/N ENTRE EL COMITE I DEL PP.JJ. CONSTRUCCION CIVIL Y LA APV. AMAUTA",
                   PubType: "Santiago",
                   times:
-                  "<br>"+"CÓDIGO SNIP: "+
+                  "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                    "PRESUPUESTO: S/. 1,200,086.96"+
+                    "<strong>PRESUPUESTO:</strong> S/. 1,200,086.96"+
                         "<br>" +
-                    "TIPO DE OBRA: Vías"+
+                    "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                    "PLAZO: "+
+                    "<strong>PLAZO:</strong> "+
                         "<br>" +
-                    "% AVANCE FÍSICO: 80%"+
+                    "<strong>% AVANCE FÍSICO:</strong> 80%"+
                         "<br>" +
-                    "BENEFICIARIOS: "+
+                    "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -954,17 +1102,17 @@
                 name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE RAQUEL EN LA APV. PUCUTUPAMPA",
                 PubType: "Santiago",
                 times:
-                "<br>"+"CÓDIGO SNIP: "+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                  "PRESUPUESTO: S/. 593,508.38"+
+                  "<strong>PRESUPUESTO:</strong> S/. 593,508.38"+
                         "<br>" +
-                    "TIPO DE OBRA: Vías"+
+                    "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                    "PLAZO: "+
+                    "<strong>PLAZO:</strong> "+
                         "<br>" +
-                    "% AVANCE FÍSICO: 70%"+
+                    "<strong>% AVANCE FÍSICO:</strong> 70%"+
                         "<br>" +
-                    "BENEFICIARIOS: "+
+                    "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -981,17 +1129,17 @@
                   name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR, PEATONAL Y ACONDICIONAMIENTO URBANO DE LA PROLONGACION PERA DEL PP.JJ SANTIAGO",
                   PubType: "Santiago",
                   times:
-                  "<br>"+"CÓDIGO SNIP: "+
+                  "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                    "PRESUPUESTO: S/. 1,387,303.59"+
+                    "<strong>PRESUPUESTO:</strong> S/. 1,387,303.59"+
                         "<br>" +
-                    "TIPO DE OBRA: Vías"+
+                    "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                    "PLAZO: "+
+                    "<strong>PLAZO: </strong>"+
                         "<br>" +
-                    "% AVANCE FÍSICO: 50%"+
+                    "<strong>% AVANCE FÍSICO:</strong> 50%"+
                         "<br>" +
-                    "BENEFICIARIOS: "+
+                    "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -1008,17 +1156,17 @@
                   name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE BALTAZAR ZEGARRA Y PASAJE OTILIA RAMOS DEL CENTRO HISTÓRICO",
                   PubType: "Santiago",
                   times:
-                  "<br>"+"CÓDIGO SNIP: "+
+                  "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                    "PRESUPUESTO: S/. 952,916.07"+
+                    "<strong>PRESUPUESTO:</strong> S/. 952,916.07"+
                         "<br>" +
-                    "TIPO DE OBRA: Vías"+
+                    "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                    "PLAZO: "+
+                    "<strong>PLAZO:</strong> "+
                         "<br>" +
-                    "% AVANCE FÍSICO: 40%"+
+                    "<strong>% AVANCE FÍSICO:</strong> 40%"+
                         "<br>" +
-                    "BENEFICIARIOS: "+
+                    "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -1035,17 +1183,17 @@
                   name: "MEJORAMIENTO DE LOS SERVICIOS CULTURALES DEL MONUMENTO HISTÓRICO - IGLESIA SANTIAGO APOSTOL",
                   PubType: "Santiago",
                   times:
-                  "<br>"+"CÓDIGO SNIP: "+
+                  "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                    "PRESUPUESTO: S/."+
+                    "<strong>PRESUPUESTO:</strong> S/."+
                         "<br>" +
-                    "TIPO DE OBRA: Cultura"+
+                    "<strong>TIPO DE OBRA:</strong> Cultura"+
                         "<br>" +
-                    "PLAZO: "+
+                    "<strong>PLAZO:</strong> "+
                         "<br>" +
-                    "% AVANCE FÍSICO: 30%"+
+                    "<strong>% AVANCE FÍSICO:</strong> 30%"+
                         "<br>" +
-                    "BENEFICIARIOS: "+
+                    "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -1062,17 +1210,17 @@
                 name: "REPARACIÓN DE PISTAS RENOVACIÓN DE SEÑALES DE TRÁNSITO EN LA CALLE ABRACITOS, ZETAS, PAMPA DEL CASTILLO, SANTO DOMINGO Y SAN AGUSTIN",
                 PubType: "Cusco",
                 times:
-                "<br>"+"CÓDIGO SNIP: "+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                    "PRESUPUESTO: S/. 1,098,682.31"+
+                    "<strong>PRESUPUESTO:</strong> S/. 1,098,682.31"+
                         "<br>" +
-                    "TIPO DE OBRA: Vías"+
+                    "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                    "PLAZO: 01/03/2021 "+
+                    "<strong>PLAZO:</strong> 01/03/2021 "+
                         "<br>" +
-                    "% AVANCE FÍSICO: 65%"+
+                    "<strong>% AVANCE FÍSICO:</strong> 65%"+
                         "<br>" +
-                    "BENEFICIARIOS: "+
+                    "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -1089,17 +1237,17 @@
                 name: "MEJORAMIENTO DE CONDICIONES ADECUADAS DE TRANSITABILIDAD PEATONAL Y VEHICULAR APV LOROPUÑUNA Y JARDINES DEL MIRADOR",
                 PubType: "Saylla",
                 times:
-                "<br>"+"CÓDIGO SNIP: "+
+                "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                  "PRESUPUESTO: S/. 754,071.40"+
+                  "<strong>PRESUPUESTO:</strong> S/. 754,071.40"+
                         "<br>" +
-                  "TIPO DE OBRA: Vías"+
+                  "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                  "PLAZO: 01/08/2018 - 31/12/2020 "+
+                  "<strong>PLAZO:</strong> 01/08/2018 - 31/12/2020 "+
                         "<br>" +
-                  "% AVANCE FÍSICO: 75%"+
+                  "<strong>% AVANCE FÍSICO:</strong> 75%"+
                         "<br>" +
-                  "BENEFICIARIOS: "+
+                  "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -1116,17 +1264,17 @@
                 name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA APV CONDEBAMBA BAJA",
                 PubType: "Saylla",
                 times:
-                  "<br>"+"CÓDIGO SNIP: "+
+                  "<br>"+"<strong>CÓDIGO SNIP:</strong> "+
                         "<br>" +
-                  "PRESUPUESTO: S/. 1,226,006.06"+
+                  "<strong>PRESUPUESTO:</strong> S/. 1,226,006.06"+
                         "<br>" +
-                  "TIPO DE OBRA: Vías"+
+                  "<strong>TIPO DE OBRA:</strong> Vías"+
                         "<br>" +
-                  "PLAZO: "+
+                  "<strong>PLAZO:</strong> "+
                         "<br>" +
-                  "% AVANCE FÍSICO: 70%"+
+                  "<strong>% AVANCE FÍSICO:</strong> 70%"+
                         "<br>" +
-                  "BENEFICIARIOS: "+
+                  "<strong>BENEFICIARIOS:</strong> "+
                         "<br>"+" "+
                         "<br>"+" "+
                         "<br>"
@@ -1140,7 +1288,7 @@
       map.on('load', function () {
         // Load an image from an external URL.
         map.loadImage(
-        'images/work.png',
+        'images/wor.png',
         function (error, image) {
         if (error) throw error;
         
@@ -1159,7 +1307,7 @@
             );
             });
             //Para girar la capa principal, movimiento
-            map.rotateTo(160, { duration: 10000 })
+            map.rotateTo(30.0, { duration: 10000 })
       map.on("load", function() {
         map.addLayer({
           id: "places",
@@ -1209,8 +1357,7 @@
               .setHTML(
                 "<h3>" +
                   features[0].properties.name +'<img src="' + features[0].properties.image + '" class="center">'+
-                  "</h3>" +
-                  "<h4>MÁS INFORMACIÓN</h4>" +
+                  "</h3>"+
                   "<p>" +
                   features[0].properties.times +
                   "</p>" 
@@ -1244,5 +1391,16 @@
      
 });
 
+   </script>
+   <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+      }
    </script>
 </html>

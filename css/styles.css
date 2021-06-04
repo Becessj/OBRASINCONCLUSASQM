@@ -34,16 +34,31 @@
     padding: 4px 9px;
     transition: all 0.5s;
   }
+  img {
+    
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    vertical-align:middle;
+  
+  }
   /* active side bar */
   .sidebar {
     position: fixed;
     left: -250px;
     width: 250px;
     height: 100%;
-    background: #042331;
+    background: #f2f2f2;
     transition: all 0.5s ease;
     
     
+  }
+  .sidebar img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    vertical-align:middle;
+
   }
   #check:checked ~ .sidebar {
     left: 0;
@@ -60,32 +75,38 @@
     margin-left: 250px;
   }
   .sidebar header img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 140px;
   }
   .sidebar header {
     font-size: 22px;
-    color: #fff;
+    color: rgba(180, 168, 168, 0.87);
     text-align: center;
     line-height: 15px;
-    background: #063146;
-    font-family: 'Comic Sans MS';
+    background: #323A40;
+    font-family: 'Open Sans';
     user-select: none;
   }
   .sidebar ul a {
-    font: 400 20px/20px 'Comic Sans MS';
+    font: 400 20px/20px 'Open Sans';
     display: block;
     height: 100%;
     width: 100%;
     line-height: 56px;
     font-size: 15px;
-    color: #fff;
+    color: rgb(14, 14, 14);
     padding-left: 40px;
     box-sizing: border-box;
     border-top: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid black;
     transition: 0.4s;
+  }
+  .sidebar ul img {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    vertical-align:middle;
   }
   .sidebar ul a i {
     margin-right: 16px;
@@ -111,211 +132,7 @@
   .sidebar header p {
     padding: 15px;
   }
-  /*PARA LA CABECERA*/
-  .header_logo {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    border: red solid 1px;
-    margin: 0 0 0 2px;
-  }
-  .header img {
-    max-height: 100%;
-    min-height: 100%;
-    margin: 0 5px 0 2px;
-  }
-.cabecera-barra{
-    font:13px 'Comic Sans MS';
-}
- 
-.cabecera-barra .cabecera-separador{
-    max-width: 700px;
-    text-align: center;
-    margin: 0 auto;
-}
- 
-/* Logotipo */
- 
-.cabecera-barra h1{
-    float: left;
-    font: normal 28px 'Comic Sans MS';
-    line-height: 30px;
-    margin: 0;
-}
- 
-.cabecera-barra h1 span {
-    color: #bc40df;
-}
- 
-/* barra 1*/
- 
-.cabecera-barra .cabecera-barra-1{
-    background-color:#612f2f;
-    box-shadow:0 1px 1px #ccc;
-    padding: 20px 40px;
-    height: 80px;
-    color: #ffffff;
-    box-sizing: border-box;
-}
- 
-.cabecera-barra .cabecera-barra-1 a {
-    color: #ffffff;
-    text-decoration: none;
-}
- 
-.cabecera-barra .cabecera-barra-1 nav {
-    font:14px 'Comic Sans MS';
-    line-height: 40px;
-    float: left;
-    margin: 0 0 0 60px;
-    padding: 0;
-}
- 
-.cabecera-barra .cabecera-barra-1 nav a{
-    display: inline-block;
-    padding: 0 5px;
-    opacity: 0.9;
-    text-decoration:none;
-    line-height: 1;
-}
- 
-.cabecera-barra .cabecera-barra-1 nav a:hover {
-    opacity: 1;
-}
- 
-.cabecera-barra .cabecera-barra-1 nav a.activo {
-    border-radius: 2px;
-    background-color: #2B5773;
-    padding: 8px 12px;
-} 
-/*  Hacemos responsive la cabecera usted podrá adicionar mas propiedades para diferentes dispositivos solo se ha usado dos para este demo . */
- 
-@media all and (max-width: 800px) {
- 
-    .cabecera-barra .cabecera-barra-2 nav{
-        font-size:14px;
-    }
- 
-}
- 
-@media all and (max-width: 600px) {
- 
-    .cabecera-barra .cabecera-barra-1{
-        padding:20px 0;
-    }
- 
-    .cabecera-barra .cabecera-barra-1 h1 {
-        float: none;
-        margin: -8px 0 2px;
-        text-align: center;
-        font-size: 24px;
-        line-height: 1;
-    }
- 
-    .cabecera-barra .cabecera-barra-1 nav {
-        margin: 0;
-        float: none;
-        font-size:13px;
-    }
- 
-    .cabecera-barra .cabecera-barra-1 nav a.activo {
-        padding: 5px 8px;
-    }
- 
-    .cabecera-barra .cabecera-barra-2{
-        padding: 20px 0;
-    }
- 
-    .cabecera-barra .cabecera-barra-2 h2{
-        float:none;
-        margin: 0 0 12px;
-    }
- 
-    .cabecera-barra .cabecera-barra-2 nav{
-        text-align: center;
-    }
- 
-    .cabecera-barra .cabecera-barra-2 nav a{
-        display: block;
-        padding: 8px;
-    }
- 
-    .cabecera-barra .cabecera-barra-2 nav i.fa{
-        margin-left:0;
-    }
-}
-    /* class applies to select element itself, not a wrapper element */
-    .select-css {
-      display: block;
-      font-size: 10px;
-      font-family: 'Comic Sans MS';
-      font-weight: 700;
-      color: #444;
-      line-height: 1.3;
-      padding: .6em 1.4em .5em .8em;
-      width: 100%;
-      max-width: 100%; /* useful when width is set to anything other than 100% */
-      box-sizing: border-box;
-      margin: 0;
-      border: 1px solid #aaa;
-      box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
-      border-radius: .5em;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      appearance: none;
-      background-color: #fff;
-      /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
-        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
-        
-      */
-      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-        linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
-      background-repeat: no-repeat, repeat;
-      /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
-      background-position: right .7em top 50%, 0 0;
-      /* icon size, then gradient */
-      background-size: .65em auto, 100%;
-    }
-    /* Hide arrow icon in IE browsers */
-    .select-css::-ms-expand {
-      display: none;
-    }
-    /* Hover style */
-    .select-css:hover {
-      border-color: #888;
-    }
-    /* Focus style */
-    .select-css:focus {
-      border-color: #aaa;
-      /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
-      box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-      box-shadow: 0 0 0 3px -moz-mac-focusring;
-      color: #222; 
-      outline: none;
-    }
-
-    /* Set options to normal weight */
-    .select-css option {
-      font-weight:normal;
-    }
-
-    /* Support for rtl text, explicit support for Arabic and Hebrew */
-    *[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
-      background-position: left .7em top 50%, 0 0;
-      padding: .6em .8em .5em 1.4em;
-    }
-
-    /* Disabled styles */
-    .select-css:disabled, .select-css[aria-disabled=true] {
-      color: graytext;
-      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-        linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
-    }
-
-    .select-css:disabled:hover, .select-css[aria-disabled=true] {
-      border-color: #aaa;
-    }
-
+  
 
     body {
       margin: 2rem;
@@ -364,7 +181,7 @@
       transform: rotate(0deg);
     }
     .legend {
-      background-color: #fff;
+      background-color: #A9B1DE;
       border-radius: 3px;
       bottom: 10px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -374,10 +191,16 @@
       right: 10px;
       z-index: 1;
       }
-       
       .legend h4 {
       margin: 0 0 10px;
       }
+      .legend img {
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-left: 10px;
+        vertical-align:middle;
+        }
        
       .legend div span {
       border-radius: 50%;
@@ -425,13 +248,13 @@
     width: 30%;
     position: relative;
     transition: all 5s ease-in-out;
-    font: 'Comic Sans MS';
+    font: 'Open Sans';
   }
   
   .popup h2 {
     margin-top: 0;
     color: #333;
-    font-family: 'Comic Sans MS';
+    font-family: 'Open Sans';
   }
   .popup img {
     height: 250px;
