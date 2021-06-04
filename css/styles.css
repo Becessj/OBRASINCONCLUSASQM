@@ -12,7 +12,7 @@
   label #cancle {
     position: absolute;
     cursor: pointer;
-    background: #042331;
+    background: #233BB0;
     color: #fff;
     border-radius: 3px;
   }
@@ -42,13 +42,13 @@
     vertical-align:middle;
   
   }
-  /* active side bar */
+  /*SIDEBAR COLOR PRINCIPAL DE ESCALONES */
   .sidebar {
     position: fixed;
     left: -250px;
     width: 250px;
     height: 100%;
-    background: #f2f2f2;
+    background: #233BB0;
     transition: all 0.5s ease;
     
     
@@ -75,12 +75,12 @@
     margin-left: 250px;
   }
   .sidebar header img {
-    width: 200px;
-    height: 140px;
+    width: 240px;
+    height: 160px;
   }
   .sidebar header {
     font-size: 22px;
-    color: rgba(180, 168, 168, 0.87);
+    color: #ffffff;
     text-align: center;
     line-height: 15px;
     background: #323A40;
@@ -92,13 +92,13 @@
     display: block;
     height: 100%;
     width: 100%;
-    line-height: 56px;
+    line-height: 50px;
     font-size: 15px;
-    color: rgb(14, 14, 14);
+    color: rgb(252, 252, 250);
     padding-left: 40px;
     box-sizing: border-box;
     border-top: 1px solid rgba(255,255,255,0.1);
-    border-bottom: 1px solid black;
+   
     transition: 0.4s;
   }
   .sidebar ul img {
@@ -122,12 +122,12 @@
     margin-top: 16px;
     border-radius: 50%;
     color: #fff;
-    background: #04334b;
+    background: #323A40;
     font-size: 15px;
   }
   /* icons hover effect */
   .social-links i:hover {
-    background: #1492d1;
+    background: #ad84bf;
   }
   .sidebar header p {
     padding: 15px;
@@ -185,7 +185,7 @@
       border-radius: 3px;
       bottom: 10px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      font: 12px/20px 'Open Sans';
       padding: 10px;
       position: absolute;
       right: 10px;
