@@ -351,13 +351,15 @@
     <div id="map"></div>
     
     <div id="state-legend" class="legend">
-      <h4>OBRAS PUBLICAS</h4>
+      <h4 >OBRAS PÚBLICAS</h4>
       <div><img src="images/via.svg">&nbsp;&nbsp;Vías</div>
       <div><img src="images/ep.svg">&nbsp;&nbsp;Espacio Público</div>
       <div><img src="images/cul.svg">&nbsp;&nbsp;Cultura</div>
       <div><img src="images/ed.svg">&nbsp;&nbsp;Educación</div>
       <div><img src="images/sal.svg">&nbsp;&nbsp;Salud</div>
-      <div class="fb-share-button" data-href="https://becessj.github.io/OBRASINCONCLUSASQM/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+      <div style="text-align: center; margin: 1rem; " class="fb-share-button" data-href="https://becessj.github.io/OBRASINCONCLUSASQM/" data-layout="button" data-size="large">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
+      </div>
    
       </div>
        <script>
@@ -493,12 +495,17 @@
     new mapboxgl.NavigationControl());
       // Add geolocate control to the map.
       map.addControl(
-      new mapboxgl.GeolocateControl({
-      positionOptions: {
-      enableHighAccuracy: true
-      },
-      trackUserLocation: true
-      })
+          new mapboxgl.GeolocateControl({
+              fitBoundsOptions: {
+                  zoom: 15,
+              },
+              positionOptions: {
+                  enableHighAccuracy: true
+                  
+              },
+              trackUserLocation: true
+              /*fitBoundsOptions: {linear: true, zoom: 13}*/
+          })
       );
       
       window.map = map;
