@@ -304,7 +304,21 @@
           </div>
       </nav>
 </header>
-      
+      <!-- Trigger the Modal -->
+          
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
       <div   style="z-index: 10000; position: relative; top: 0;">
             <input type="checkbox" id="check">
 
@@ -528,7 +542,7 @@
               name: "linea linea",
               PubType: "LINEA PUNTO",
               times:
-              "<br>"+'<strong>Make it Mount Pleasant</strong><p><a href="images/1.jpg" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'+
+              "<br>"+'<p><a href="images/1.jpg" target="_blank" title="Opens in a new window"><strong>VER FOTO</strong></a></p>'+
                 "<br>" +
                 "<strong>Presupuesto:</strong> S/. 1,753,170.12"+
                 "<br>" +
@@ -1311,7 +1325,7 @@
       map.on('load', function () {
         // Load an image from an external URL.
         map.loadImage(
-        'images/wor.png',
+        'images/work.png',
         function (error, image) {
         if (error) throw error;
         
@@ -1341,7 +1355,7 @@
           },
           layout: {
             'icon-image': 'work', // reference the image
-            'icon-size': 0.1
+            'icon-size': 0.05
           }
         });
 
@@ -1379,7 +1393,7 @@
               .setLngLat(e.lngLat)
               .setHTML(
                 "<h3>" +
-                  features[0].properties.name +'<img src="' + features[0].properties.image + '" class="center">'+
+                  features[0].properties.name +'<br><img src="' + features[0].properties.image + '" class="center">'+
                   "</h3>"+
                   "<p>" +
                   features[0].properties.times +
@@ -1436,5 +1450,43 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+   </script>
+   <script>
+     $(document).ready(function() {
+
+          $('.image-popup-vertical-fit').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            mainClass: 'mfp-img-mobile',
+            image: {
+              verticalFit: true
+            }
+            
+          });
+
+          $('.image-popup-fit-width').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            image: {
+              verticalFit: false
+            }
+          });
+
+          $('.image-popup-no-margins').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            fixedContentPos: true,
+            mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+            image: {
+              verticalFit: true
+            },
+            zoom: {
+              enabled: true,
+              duration: 300 // don't foget to change the duration also in CSS
+            }
+          });
+
+          });
    </script>
 </html>
