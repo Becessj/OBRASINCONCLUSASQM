@@ -306,7 +306,7 @@
             <div id="popup1" class="overlay">
               <div class="popup">
                 <img src="images/pop.png" alt="Qosqo Mappers" >
-                <a class="close" href="#">&times;</a>
+                 <a class="close" href="#">&times;</a>
                 <div class="content" style="text-align: justify;">
                   Somos un voluntariado que tiene como objetivo lograr que estudiantes y egresados de la 
                   Universidad Nacional San Antonio Abad del Cusco, aprendan a utilizar mapas digitales y 
@@ -1371,7 +1371,7 @@
               .setLngLat(e.lngLat)
               .setHTML(
                 "<h3>" +
-                  features[0].properties.name +'<a href="' + features[0].properties.image + '" class="center" target="_blank" title="Opens in a new window"><br><i class="fa fa-picture-o" aria-hidden="true"></i></a>'+
+                  features[0].properties.name +'<br> <img src="' + features[0].properties.image + '" onclick="window.open(this.src)">' +
                   "</h3>"+
                   "<p>" +
                   features[0].properties.times +
@@ -1428,6 +1428,11 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+   </script>
+   <script>
+     $("img").click(function() {
+  alert("Image clicked");
+});
    </script>
 
 </html>
