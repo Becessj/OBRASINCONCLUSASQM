@@ -210,7 +210,7 @@
       bottom: 10px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
       font: 12px/20px 'Open Sans';
-      padding: 10px;
+      padding: 1.5px;
       position: absolute;
       right: 10px;
       z-index: 1;
@@ -221,8 +221,8 @@
       }
       .legend img {
         border-radius: 50%;
-        height: 3em;
-        width: 3em;
+        height: 1.5em;
+        width: 1.5em;
         margin-left: 10px;
         vertical-align:middle;
         }
@@ -314,39 +314,4 @@
       width: 70%;
     }
   }
-  /*PARA ABRIR IMAGEN POP UP*/
-  /* padding-bottom and top for image */
-    .mfp-no-margins img.mfp-img {
-      padding: 0;
-    }
-    /* position of shadow behind the image */
-    .mfp-no-margins .mfp-figure:after {
-      top: 0;
-      bottom: 0;
-    }
-    /* padding for main container */
-    .mfp-no-margins .mfp-container {
-      padding: 0;
-    }
-
-    .mfp-with-zoom .mfp-container,
-    .mfp-with-zoom.mfp-bg {
-      opacity: 0;
-      -webkit-backface-visibility: hidden;
-      -webkit-transition: all 0.3s ease-out; 
-      -moz-transition: all 0.3s ease-out; 
-      -o-transition: all 0.3s ease-out; 
-      transition: all 0.3s ease-out;
-    }
-
-    .mfp-with-zoom.mfp-ready .mfp-container {
-        opacity: 1;
-    }
-    .mfp-with-zoom.mfp-ready.mfp-bg {
-        opacity: 0.8;
-    }
-
-    .mfp-with-zoom.mfp-removing .mfp-container, 
-    .mfp-with-zoom.mfp-removing.mfp-bg {
-      opacity: 0;
-    }
+ 

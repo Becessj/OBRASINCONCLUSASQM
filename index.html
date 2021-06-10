@@ -107,15 +107,7 @@
       margin-right:1;
       font: 50 10px/15px 'Open Sans';
 }
-    
-    /*img {
-      border-radius: 50%;
-      height: 30px;
-      width: 30px;
-      margin-left: 10px;
-      vertical-align:middle;
-    
-    }*/
+ 
     @import url('https://fonts.googleapis.com/css2?family=Opensans:ital,wght@0,500;1,400&display=swap');
 
      
@@ -183,7 +175,7 @@
       }
       .nav-logo img{
         height: 60px;
-        width: 220px;
+        width: 200px;
       }
       @media only screen and (max-width: 768px) {
           .nav-menu {
@@ -304,21 +296,6 @@
           </div>
       </nav>
 </header>
-      <!-- Trigger the Modal -->
-          
-
-          <!-- The Modal -->
-          <div id="myModal" class="modal">
-
-            <!-- The Close Button -->
-            <span class="close">&times;</span>
-
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="img01">
-
-            <!-- Modal Caption (Image Text) -->
-            <div id="caption"></div>
-          </div>
       <div   style="z-index: 10000; position: relative; top: 0;">
             <input type="checkbox" id="check">
 
@@ -378,7 +355,7 @@
       <div><img src="images/cul.svg">&nbsp;&nbsp;Cultura</div>
       <div><img src="images/ed.svg">&nbsp;&nbsp;Educación</div>
       <div><img src="images/sal.svg">&nbsp;&nbsp;Salud</div>
-      <div style="text-align: center; margin: 1rem; " class="fb-share-button" data-href="https://becessj.github.io/OBRASINCONCLUSASQM/" data-layout="button" data-size="large">
+      <div style="text-align: center; margin: 0.5rem; " class="fb-share-button" data-href="https://becessj.github.io/OBRASINCONCLUSASQM/" data-layout="button" data-size="large">
         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
       </div>
    
@@ -542,7 +519,6 @@
               name: "linea linea",
               PubType: "LINEA PUNTO",
               times:
-              "<br>"+'<p><a href="images/1.jpg" target="_blank" title="Opens in a new window"><strong>VER FOTO</strong></a></p>'+
                 "<br>" +
                 "<strong>Presupuesto:</strong> S/. 1,753,170.12"+
                 "<br>" +
@@ -1384,7 +1360,9 @@
           }
           map.getSource('places').setData(newGeoJSON);
         };
-
+        
+        //<br><img src="' + features[0].properties.image + '" class="center">
+        //<a href="#popup1" class="manual-optin-trigger" data-optin-slug="atefh5rvxazforll">Acerca de nosotros</a>
         const popup = new mapboxgl.Popup();
         map.on("click", e => {
           const features = map.queryRenderedFeatures(e.point, { layers: ['places'] });
@@ -1393,7 +1371,7 @@
               .setLngLat(e.lngLat)
               .setHTML(
                 "<h3>" +
-                  features[0].properties.name +'<br><img src="' + features[0].properties.image + '" class="center">'+
+                  features[0].properties.name +'<a href="' + features[0].properties.image + '" class="center" target="_blank" title="Opens in a new window"><br><i class="fa fa-picture-o" aria-hidden="true"></i></a>'+
                   "</h3>"+
                   "<p>" +
                   features[0].properties.times +
@@ -1451,42 +1429,5 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
    </script>
-   <script>
-     $(document).ready(function() {
 
-          $('.image-popup-vertical-fit').magnificPopup({
-            type: 'image',
-            closeOnContentClick: true,
-            mainClass: 'mfp-img-mobile',
-            image: {
-              verticalFit: true
-            }
-            
-          });
-
-          $('.image-popup-fit-width').magnificPopup({
-            type: 'image',
-            closeOnContentClick: true,
-            image: {
-              verticalFit: false
-            }
-          });
-
-          $('.image-popup-no-margins').magnificPopup({
-            type: 'image',
-            closeOnContentClick: true,
-            closeBtnInside: false,
-            fixedContentPos: true,
-            mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-            image: {
-              verticalFit: true
-            },
-            zoom: {
-              enabled: true,
-              duration: 300 // don't foget to change the duration also in CSS
-            }
-          });
-
-          });
-   </script>
 </html>
