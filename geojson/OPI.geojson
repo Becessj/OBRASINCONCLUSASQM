@@ -1,0 +1,761 @@
+        {
+        id: "places",
+        type: "FeatureCollection",
+        features: [
+                  {
+          type: 'Feature',
+          properties: {
+              name: "linea linea",
+              PubType: "LINEA PUNTO",
+              times:
+              "<br>"+"CÓDIGO SNIP: 378993"+
+                "<br>" +
+                "PRESUPUESTO: S/. 1,753,170.12"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 03/09/2020 - 30/04/2021"+
+                "% AVANCE FÍSICO: 55%"+
+                "<br>" +
+                "BENEFICIARIOS: 989"+
+                "<br>"
+            },
+            geometry: {
+              type: "LineString",
+              coordinates:  [
+              [
+                -71.950364112854,
+                -13.533401139389131
+              ],
+              [
+                -71.93912029266357,
+                -13.534360783531133
+              ],
+              [
+                -71.92972183227539,
+                -13.53565421081826
+              ],
+              [
+                -71.92079544067381,
+                -13.5364052298884
+              ]
+            ]
+            }
+          
+          } 
+        ,{
+            type: "Feature",
+            properties: {
+			  message: 'Baz',
+              iconSize: [40, 40],
+              name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA AV. JUSTICIA Y JR. LA LIBERTAD EN LA URB. SAN FRANCISCO Y LA AV. LA CONVENCION DE LA URB. PROGRESO (ENTRE EL JR. LA VERDAD Y JR. SAYLLA)",
+              PubType: "Wanchaq",
+              times:
+              "<br>"+"CÓDIGO SNIP: 2412227"+
+	          "<br>" +
+            "PRESUPUESTO: S/. 3,607,891.21"+
+            "<br>" +
+            "TIPO DE OBRA: Vías"+
+            "<br>" +
+            "PLAZO: 23/09/2020 - 19/07/2021"+
+            "<br>" +
+            "% AVANCE FÍSICO: 55%"+
+            "<br>" +
+            "BENEFICIARIOS: 1476"+
+                "<br>"+" "+
+                "<br>"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-71.96734,-13.52264]
+            }
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA AV. HUAMANTIANA",
+              PubType: "Wanchaq",
+              times:
+              "<br>"+"CÓDIGO SNIP: 378993"+
+                "<br>" +
+                "PRESUPUESTO: S/. 1,753,170.12"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 03/09/2020 - 30/04/2021"+
+                "% AVANCE FÍSICO: 55%"+
+                "<br>" +
+                "BENEFICIARIOS: 989"
+                +
+                "<br>"+" "+
+                "<br>"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-71.9517695, -13.5308791]
+            }
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL DE LAS CALLES DE LA URBANIZACION JOSE CARLOS MARIATEGUI, CENTRO POBLADO DE WANCHAQ",
+              PubType: "Wanchaq",
+              times:
+              "<br>"+"CÓDIGO SNIP: 2385413"+
+                "<br>" +
+                "PRESUPUESTO: S/. 2,824,357.20"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 19/08/2020 - 15/04/2021"+
+                "<br>" +
+                "% AVANCE FÍSICO: 60%"+
+                "<br>" +
+                "BENEFICIARIOS: 998"+
+                "<br>"+" "+
+                "<br>"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-71.9387932, -13.5319332]
+            }
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "MEJORAMIENTO DE LOS SERVICIOS DE EDUCACIÓN INICIAL DE LA I.E. MARÍA TRINIDAD ENRIQUEZ DE LA URBANIZACIÓN TTIO",
+              PubType: "Wanchaq",
+              times:
+              "<br>"+"CÓDIGO SNIP:"+
+                "<br>" + 
+                "PRESUPUESTO: S/. 3,036,193.52"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO:"+
+                "<br>" + 
+                  "% AVANCE FÍSICO: 87%"+
+                "<br>" +
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-71.9562577, -13.5318944]
+            }
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "MEJORAMIENTO DE LA TRANSITABILIDAD PEATONAL Y VEHICULAR DE LA CALLE REPUBLICA DE ARGENTINA",
+              PubType: "Wanchaq",
+              times:
+              "<br>"+"CÓDIGO SNIP: "+
+                "<br>" +
+                "PRESUPUESTO: S/. 1,354,814.00"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: "+
+                "<br>" +
+                "% AVANCE FÍSICO: 20%"+
+                "<br>" +
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-71.9425225, -13.5339925]
+            }
+          },
+          {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO Y CONSTRUCCION DE MURO DE CONTENCION AVENIDA JUSTICIA Y LA CONVENCION",
+                PubType: "Wanchaq",
+                times:
+                "<br>"+"CÓDIGO SNIP: "+
+                "<br>" +
+                "PRESUPUESTO: S/. 1,339,700.00"+
+                "<br>" +
+                "TIPO DE OBRA: Espacios públicos"+
+                "<br>" +
+                "PLAZO: "+
+                "<br>" +
+                "% AVANCE FÍSICO: 90% "+
+                "<br>" +
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+          type: "Point",
+          coordinates: [-71.9643871, -13.5269163]
+        }
+      },
+      {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO Y AMPLIACIÓN DE LA OFERTA DE SERVICIOS EDUCATIVOS DE NIVEL SECUNDARIO DE LA I. E N°50025 - DANIEL ESTRADA PÉREZ",
+                PubType: "Wanchaq",
+                times:
+                "<br>"+"CÓDIGO SNIP: "+
+                "<br>" +
+                "PRESUPUESTO: "+
+                "<br>" +
+                "TIPO DE OBRA: "+
+                "<br>" +
+                "PLAZO: "+
+                "<br>" +
+                "% AVANCE FÍSICO: 80% "+
+                "<br>" +
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9624256, -13.5245756]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "RECUPERACION DEL MONUMENTO VIRREINAL RELIGIOSO TEMPLO DE SAN SEBASTIAN ARQUITECTURA Y ELEMENTOS DE INFRAESTRUCTURA FISICA DAÑADOS POR EL INCENDIO 2016",
+                PubType: "San Sebastian",
+                times:
+                "<br>"+"CÓDIGO SNIP: 2383182"+
+                "<br>" +
+                "PRESUPUESTO: S/ 4,008,778.77"+
+                "<br>" +
+                "TIPO DE OBRA: Cultural"+
+                "<br>" +
+                "PLAZO: 09/2021 - 09/2020"+
+                "<br>" +
+                "% AVANCE FÍSICO: 80% "+
+                "<br>" +
+                "BENEFICIARIOS: "+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9376961, -13.5302581]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO, AMPLIACIÓN DEL SERVICIO DE EDUCACIÓN PRIMARIA EN LA I.E. N 50014 TANKARPATA SECTOR TANKARPATA",
+                PubType: "San Sebastian",
+                times:
+                "<br>"+"CÓDIGO SNIP: 266551"+
+                "<br>" +
+                "PRESUPUESTO: S/ 5,582,619"+
+                "<br>" +
+                "TIPO DE OBRA: Educación"+
+                "<br>" +
+                "PLAZO: 04/2019 - 05/2020"+
+                "<br>" +
+                "% AVANCE FÍSICO: 70%"+
+                "<br>" +
+                "BENEFICIARIOS: 2100"+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9488759, -13.5419141]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DEL CEMENTERIO CENTRAL",
+                PubType: "San Sebastian",
+                times:
+                "<br>"+"CÓDIGO SNIP: 236235"+
+                "<br>" +
+                "PRESUPUESTO: S/ 1,970,167.52"+
+                "<br>" +
+                "TIPO DE OBRA: Espacio público"+
+                "<br>" +
+                "PLAZO: 03/2020 - 01/2021"+
+                "<br>" +
+                "% AVANCE FÍSICO: 90%"+
+                "<br>" +
+                "BENEFICIARIOS: 1038"+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9364336, -13.5332618]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE ESCALINATAS EN LAS DIFERENTES APVS DE LA MARGEN IZQUIERDA Y DERECHA",
+                PubType: "San Sebastian",
+                times:
+                "<br>"+ "CÓDIGO SNIP: 2485928"+
+                "<br>" +
+                "PRESUPUESTO: S/ 1,698,159.21"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 08/2020 - 04/2021"+
+                "<br>" +
+                "% AVANCE FÍSICO: 65%"+
+                "<br>" +
+                "BENEFICIARIOS: 7292"+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9223879, -13.5269661]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA CALLE TENERIA SONDOR, PSJ. TENERIA, CALLE TICAPATA,PSJ.NNOMINADO A (PRECURSORES), PSJ. B (HIPOLITO HUNANUE), PSJ INNOMINADO C (LUCEROS DEL AMANECER), URB TENERIA",
+                PubType: "San Sebastian",
+                times:
+                "<br>"+ "CÓDIGO SNIP: 155941"+
+                "<br>" +
+                "PRESUPUESTO: S/ 1,437,244.02"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 03/2020 - 10/2020"+
+                "<br>" +
+                "% AVANCE FÍSICO: 30% "+
+                "<br>" +
+                "BENEFICIARIOS: 6661"+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9106013, -13.5316119]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE CALLE SR. DE QUISPIQUILLA, PJE. VERA, PJE. MUÑECAS, PJE. ARISTIDES MEZA, PJE. MELITON CAMPOS, PJE. CHUMA DE BOLIVIA Y PJE. VISITACION LOPEZ MORALES DE LA APV VERA VELASCO",
+                PubType: "San Sebastian",
+                times:
+                "<br>"+  "CÓDIGO SNIP: 296927"+
+                "<br>" +
+                "PRESUPUESTO: S/ 730,864.61"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 12/2018  - 06/2019"+
+                "<br>" +
+                "% AVANCE FÍSICO: 90%"+
+                "<br>" +
+                "BENEFICIARIOS: 127"+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.918139, -13.5421909]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LAS CALLES SIN NOMBRE Y ARCANGELES ENTRE LAS APVS SANTA ROSA COMITE 04, TRES CRUCES Y URB. SAN GABRIEL",
+                PubType: "San Sebastian",
+                times:
+                "<br>"+ "CÓDIGO SNIP: 270645"+
+                "<br>" +
+                "PRESUPUESTO: S/ 2,749,287.34"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 12/2018 - 10/2019"+
+                "<br>" +
+                "% AVANCE FÍSICO: 70% "+
+                "<br>" +
+                "BENEFICIARIOS: 600"+
+                "<br>"+" "+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9206846, -13.5278901]
+              }
+            },{
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN LAS CALLES LOS GERANIOS, LAS MAGNOLIAS, GIRASOLES, KANTUS Y AV. PICOL DE LA APV MACHU PICOL",
+                PubType: "San Jerónimo",
+                times:
+                "<br>"+"CÓDIGO SNIP: 262483"+
+                "<br>" +
+                "PRESUPUESTO: S/. 3,256,052"+
+                "<br>" +
+                "TIPO DE OBRA: Vías"+
+                "<br>" +
+                "PLAZO: 11/03/2019 - 29/12/2020"+
+                "<br>" +
+                "% AVANCE FÍSICO: 80%"+
+                "<br>" +
+                "BENEFICIARIOS: 2,065"+
+                "<br>"+" "+
+                "<br>"+" "+
+                "<br>"
+              },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.8974209, -13.5282796]
+              }
+            },
+              {
+                    type: "Feature",
+                    properties: {
+                      name: "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA A.P.V. ALTIVA CANAS",
+                      PubType: "San Jerónimo",
+                      times:
+                      "<br>"+"CÓDIGO SNIP: 324579"+"<br>" +
+                        "PRESUPUESTO: S/. 8,257,928"+
+                        "<br>" +
+                        "TIPO DE OBRA: VíasPLAZO: 17/12/2020 - 23/08/2021"+
+                        "<br>" +
+                        "% AVANCE FÍSICO: 35%"+
+                        "<br>" +
+                        "BENEFICIARIOS: 2,959"+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+                      },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.9057233, -13.5454633]
+                    }
+                  },
+                  {
+                  type: "Feature",
+                  properties: {
+                    name: "MEJORAMIENTO DEL PARQUE Y ZONAS DE ENTRETENIMIENTO EN LA APV. HUAYNA PICOL",
+                    PubType: "San Jerónimo",
+                    times:
+                    "<br>"+"CÓDIGO SNIP: 2437279"+
+                        "<br>" +
+                        "PRESUPUESTO: S/. 596,872"+
+                        "<br>" +
+                        "TIPO DE OBRA: Espacio Público"+
+                        "<br>" +
+                        "PLAZO: 24/09/2020 - 03/01/2021"+
+                        "<br>" +
+                        "% AVANCE FÍSICO: 90%"+
+                        "<br>" +
+                        "BENEFICIARIOS: 1,527"+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+            },
+                  geometry: {
+                    type: "Point",
+                    coordinates: [-71.8957452, -13.5263266]
+                  }
+                },
+                {
+                  type: "Feature",
+                  properties: {
+                    name: "CREACION DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA APV HUAYNA PICOL",
+                    PubType: "San Jerónimo",
+                    times:
+                    "<br>"+"CÓDIGO SNIP: 2437503"+
+                        "<br>" +
+                        "PRESUPUESTO: S/. 7,962,350"+
+                        "<br>" +
+                        "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                        "PLAZO: 22/12/2020 - 19/08/2021"+
+                        "<br>" +
+                        "% AVANCE FÍSICO: 30%"+
+                        "<br>" +
+                        "BENEFICIARIOS: 5,657"+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+            },
+                  geometry: {
+                    type: "Point",
+                    coordinates: [-71.8957889, -13.5263137]
+                  }
+                },
+                {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE VIAS DE INTERCONEXION ENTRE LOS SECTORES VIA-CHINCHAYSUYO-HUAMPAR, VIA URUBAMBILLA-OSCCOLLO, VIA CHUÑUNA, VILLA LAS ROCAS-BRISAS DEL ARCO,Y VIA CRUZ VERDE- PISCIGRANJA",
+                  PubType: "Poroy",
+                  times:
+                  "<br>"+"CÓDIGO SNIP:"+
+                        "<br>" +
+                    "PRESUPUESTO:"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 75%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-72.0230035, -13.5033478]
+                }
+              },
+              {
+                type: "Feature",
+                properties: {
+                  name: "CONSTRUCCION DEL CENTRO CULTURAL Y MEJORAMIENTO DE SERVICIOS COMPLEMENTARIOS DE LA APV VILLA LAS ROCAS",
+                  PubType: "Poroy",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: "+
+                        "<br>" +
+                    "TIPO DE OBRA: Cultura"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 85%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-72.0072077, -13.5094752]
+                }
+              },
+              {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE 3 (INCA WIRACOCHA) Y CALLE S/N ENTRE EL COMITE I DEL PP.JJ. CONSTRUCCION CIVIL Y LA APV. AMAUTA",
+                  PubType: "Santiago",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/. 1,200,086.96"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 80%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-71.9898028, -13.52582]
+                }
+              },
+              {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE RAQUEL EN LA APV. PUCUTUPAMPA",
+                PubType: "Santiago",
+                times:
+                "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                  "PRESUPUESTO: S/. 593,508.38"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 70%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+        },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.9883022, -13.524514]
+              }
+            },
+            {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR, PEATONAL Y ACONDICIONAMIENTO URBANO DE LA PROLONGACION PERA DEL PP.JJ SANTIAGO",
+                  PubType: "Santiago",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/. 1,387,303.59"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 50%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-71.981028, -13.5240587]
+                }
+              },
+              {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA CALLE BALTAZAR ZEGARRA Y PASAJE OTILIA RAMOS DEL CENTRO HISTÓRICO",
+                  PubType: "Santiago",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/. 952,916.07"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 40%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-71.9842935, -13.5251623]
+                }
+              },
+              {
+                type: "Feature",
+                properties: {
+                  name: "MEJORAMIENTO DE LOS SERVICIOS CULTURALES DEL MONUMENTO HISTÓRICO - IGLESIA SANTIAGO APOSTOL",
+                  PubType: "Santiago",
+                  times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/."+
+                        "<br>" +
+                    "TIPO DE OBRA: Cultura"+
+                        "<br>" +
+                    "PLAZO: "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 30%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+          },
+                geometry: {
+                  type: "Point",
+                  coordinates: [-71.9832888, -13.525517]
+                }
+              },
+              {
+              type: "Feature",
+              properties: {
+                name: "REPARACIÓN DE PISTAS RENOVACIÓN DE SEÑALES DE TRÁNSITO EN LA CALLE ABRACITOS, ZETAS, PAMPA DEL CASTILLO, SANTO DOMINGO Y SAN AGUSTIN",
+                PubType: "Cusco",
+                times:
+                "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                    "PRESUPUESTO: S/. 1,098,682.31"+
+                        "<br>" +
+                    "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                    "PLAZO: 01/03/2021 "+
+                        "<br>" +
+                    "% AVANCE FÍSICO: 65%"+
+                        "<br>" +
+                    "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+        },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.973932, -13.5194305]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                message: 'Baz',
+                iconSize: [40, 40],
+                name: "MEJORAMIENTO DE CONDICIONES ADECUADAS DE TRANSITABILIDAD PEATONAL Y VEHICULAR APV LOROPUÑUNA Y JARDINES DEL MIRADOR",
+                PubType: "Saylla",
+                times:
+                "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                  "PRESUPUESTO: S/. 754,071.40"+
+                        "<br>" +
+                  "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                  "PLAZO: 01/08/2018 - 31/12/2020 "+
+                        "<br>" +
+                  "% AVANCE FÍSICO: 75%"+
+                        "<br>" +
+                  "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+        },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.8586456, -13.5519554]
+              }
+            },
+            {
+              type: "Feature",
+              properties: {
+                name: "MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL DE LA APV CONDEBAMBA BAJA",
+                PubType: "Saylla",
+                times:
+                  "<br>"+"CÓDIGO SNIP: "+
+                        "<br>" +
+                  "PRESUPUESTO: S/. 1,226,006.06"+
+                        "<br>" +
+                  "TIPO DE OBRA: Vías"+
+                        "<br>" +
+                  "PLAZO: "+
+                        "<br>" +
+                  "% AVANCE FÍSICO: 70%"+
+                        "<br>" +
+                  "BENEFICIARIOS: "+
+                        "<br>"+" "+
+                        "<br>"+" "+
+                        "<br>"
+            },
+              geometry: {
+                type: "Point",
+                coordinates: [-71.8310547, -13.5660805]
+              }
+            }]
+      };
